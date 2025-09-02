@@ -1,0 +1,45 @@
+cat > .gitignore <<'EOF'
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+.tmp/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Coverage / Test
+coverage/
+.nyc_output/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# Optional caches
+.npm
+.yarn-integrity
+.pnpm-debug.log*
+EOF
