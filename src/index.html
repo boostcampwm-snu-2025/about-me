@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강지혁 - Backend Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cta-500: #B05730;
+            --cta-600: #884325;
+            --neu-0: #FFFFFF;
+            --neu-500: #F0EEE5;
+            --neu-600: #DDD9C5;
+            --neu-700: #CBC4A4;
+            --neu-800: #B8AF84;
+            --neu-900: #A69A64;
+            --neu-950: #887D4E;
+            --acc-100: #E6E4F1;
+            --acc-500: #6C5DAC;
+            --status-success: #34C759;
+            --brand-primary: #FF6E2F;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F4 100%);
+            min-height: 100vh;
+            color: var(--neu-950);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F9F8F4 100%);
+            border: 1px solid var(--neu-600);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            border: 3px solid var(--neu-500);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            color: var(--neu-950);
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
+        }
+
+        .title {
+            font-size: 24px;
+            color: var(--cta-500);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--neu-800);
+            font-size: 14px;
+        }
+
+        .section {
+            background: white;
+            border: 1px solid var(--neu-600);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .section h2 {
+            font-size: 32px;
+            color: var(--neu-950);
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .experience-item {
+            border-left: 3px solid var(--cta-500);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .experience-item h3 {
+            font-size: 20px;
+            color: var(--neu-950);
+            margin-bottom: 4px;
+        }
+
+        .experience-company {
+            color: var(--cta-500);
+            font-weight: 500;
+            margin-bottom: 4px;
+        }
+
+        .experience-date {
+            color: var(--neu-800);
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .experience-item ul {
+            list-style-position: inside;
+            color: var(--neu-900);
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            color: var(--cta-500);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: var(--neu-500);
+            color: var(--neu-950);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .edit-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--cta-500);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(176, 87, 48, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .edit-btn:hover {
+            background: var(--cta-600);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(176, 87, 48, 0.4);
+        }
+
+        .editable {
+            outline: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .editable:focus {
+            background-color: var(--acc-100);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .contact-info {
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .section h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img src="profile.jpeg" alt="강지혁 프로필" class="profile-image">
+            <div class="profile-info">
+                <h1 contenteditable="false" class="editable">강지혁</h1>
+                <div class="title" contenteditable="false" class="editable">Backend Software Engineer</div>
+                <p contenteditable="false" class="editable">확장 가능한 서버 개발과 클라우드 배포에 전문성을 보유하고 있습니다.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span>📧</span>
+                        <span contenteditable="false" class="editable">wlgur7238@snu.ac.kr</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📱</span>
+                        <span contenteditable="false" class="editable">+82 010-3623-1620</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>📍</span>
+                        <span contenteditable="false" class="editable">Seoul, Korea</span>
+                    </div>
+                    <div class="contact-item">
+                        <span>💼</span>
+                        <span contenteditable="false" class="editable">linkedin.com/in/jhstevekang</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>경력사항</h2>
+            <div class="experience-item">
+                <h3 contenteditable="false" class="editable">Product Server Developer</h3>
+                <div class="experience-company" contenteditable="false" class="editable">비바리퍼블리카</div>
+                <div class="experience-date" contenteditable="false" class="editable">2022.11 - 2025.02</div>
+                <ul>
+                    <li contenteditable="false" class="editable">수요측 광고 플랫폼 개발</li>
+                    <li contenteditable="false" class="editable">pCTR 모델 구현 및 광고 서버 성능 튜닝</li>
+                    <li contenteditable="false" class="editable">Apache Kafka를 활용한 실시간 데이터 파이프라인 구축</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3 contenteditable="false" class="editable">Backend Engineer</h3>
+                <div class="experience-company" contenteditable="false" class="editable">셀렉트스타</div>
+                <div class="experience-date" contenteditable="false" class="editable">2021.11 - 2022.11</div>
+                <ul>
+                    <li contenteditable="false" class="editable">Spring MVC와 Kotlin을 활용한 사내 데이터 라벨링 서비스 개발</li>
+                    <li contenteditable="false" class="editable">내부 정산 시스템 자동화</li>
+                </ul>
+            </div>
+            <div class="experience-item">
+                <h3 contenteditable="false" class="editable">Backend Engineer</h3>
+                <div class="experience-company" contenteditable="false" class="editable">PRND Company</div>
+                <div class="experience-date" contenteditable="false" class="editable">2021.08 - 2021.11</div>
+                <ul>
+                    <li contenteditable="false" class="editable">Django Rest Framework를 활용한 중고차 거래 백오피스 개발</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>학력</h2>
+            <div class="experience-item">
+                <h3 contenteditable="false" class="editable">서울대학교</h3>
+                <div class="experience-company" contenteditable="false" class="editable">컴퓨터공학부</div>
+                <div class="experience-date" contenteditable="false" class="editable">2025년 3월까지 휴학 (군복무)</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>기술 스택</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" contenteditable="false">Python</span>
+                        <span class="skill-tag" contenteditable="false">Java</span>
+                        <span class="skill-tag" contenteditable="false">Kotlin</span>
+                        <span class="skill-tag" contenteditable="false">Spring</span>
+                        <span class="skill-tag" contenteditable="false">Django</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" contenteditable="false">Kubernetes</span>
+                        <span class="skill-tag" contenteditable="false">Docker</span>
+                        <span class="skill-tag" contenteditable="false">AWS</span>
+                        <span class="skill-tag" contenteditable="false">Apache Kafka</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag" contenteditable="false">PostgreSQL</span>
+                        <span class="skill-tag" contenteditable="false">MySQL</span>
+                        <span class="skill-tag" contenteditable="false">Redis</span>
+                        <span class="skill-tag" contenteditable="false">MongoDB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="edit-btn" onclick="toggleEdit()">편집 모드</button>
+
+    <script src="main.js"></script>
+</body>
+</html>
