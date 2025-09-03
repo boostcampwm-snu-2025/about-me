@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --background-red: #b23636;
+  --background-blue: #4552dd;
+  --font-main: "Pretendard", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--background-red);
+  color: white;
+  font-family: var(--font-main);
+  font-size: 62.5%;
+}
+
+body.blue-bg {
+  background-color: var(--background-blue);
+}

@@ -1,0 +1,57 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  gap: 3.2rem;
+}
+
+.main-title {
+  font-size: 5.5rem;
+  font-weight: 600;
+  letter-spacing: -0.055em;
+}
+
+.info-card {
+  width: 50%;
+  max-width: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3.2rem;
+  gap: 1rem;
+  border: 1.5px solid white;
+  border-radius: 3.2rem;
+}
+
+.info-card__profile {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.info-card__hobby {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.btn {
+  padding: 1.2rem 2.4rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-family: var(--font-main);
+  font-weight: 300;
+  letter-spacing: -0.06em;
+  border: 1.5px solid white;
+  border-radius: 1.8rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: translateY(-0.12rem);
+}
+
+.info-card__btn {
+  margin-top: 1.8rem;
+}

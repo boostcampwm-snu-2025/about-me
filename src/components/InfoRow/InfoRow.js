@@ -1,5 +1,7 @@
 /* InfoRow.js */
 
+import "./InfoRow.css";
+
 const InfoRow = ({ question, answer }) => {
   return /*html*/ `
     <div class="info-row">
