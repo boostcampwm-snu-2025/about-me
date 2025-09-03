@@ -1,0 +1,25 @@
+{
+  "name": "250902_about-me",
+  "version": "1.0.0",
+  "description": "- Figma를 통해 자기소개 화면을 구성\r - Auto Layout을 활용하여 전체적인 레이아웃 자동화\r - [FIGMA](https://www.figma.com/design/R8NHH2yQ6cepLO5EW902Eg/VLSI--AI%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-front-end-%EA%B0%9C%EB%B0%9C-?node-id=0-1&t=AWef3QuobfRV1q66-1)\r - password: 12345678",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seojoonrp/250902_about-me.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seojoonrp/250902_about-me/issues"
+  },
+  "homepage": "https://github.com/seojoonrp/250902_about-me#readme",
+  "devDependencies": {
+    "vite": "^7.1.4"
+  }
+}
