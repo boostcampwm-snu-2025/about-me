@@ -1,0 +1,84 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fafafa;
+}
+
+.site-header, .site-footer {
+  background: #2f3542;
+  color: #fff;
+  padding: 16px 20px;
+}
+.site-header h1, .site-footer p { margin: 0; }
+.actions { margin-top: 8px; }
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 220px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+  position: sticky;
+  top: 12px;
+  height: fit-content;
+}
+.sidebar h2 { margin-top: 0; font-size: 18px; }
+.sidebar ul { padding-left: 16px; }
+
+.content {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+}
+.card h2 { margin-top: 0; }
+
+.profile {
+  border-radius: 12px;
+  margin-top: 12px;
+  width: 280px;
+}
+
+button {
+  padding: 10px 14px;
+  border: 1px solid #333;
+  background: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+button:hover { opacity: .8; }
+
+/* Dark mode */
+.dark {
+  background: #0f1115;
+  color: #e8e8e8;
+}
+.dark .site-header, .dark .site-footer {
+  background: #0b0d12;
+}
+.dark .sidebar, .dark .card {
+  background: #151922;
+  border-color: #232a36;
+}
+.dark button {
+  background: #e8e8e8;
+  color: #0f1115;
+  border-color: #e8e8e8;
+}
