@@ -16,7 +16,7 @@ const appHTML = /*html*/ `
   <section class="info-card info-card__hobby">
     ${InfoRow({
       question: "취미가 뭔가요?",
-      answer: "해외축구 시청\n시각디자인\n알고리즘 문제풀기\n등등등",
+      answer: "해외축구 시청\n시각디자인\n~알고리즘 문제풀기~\n등등등",
     })}
     ${InfoRow({ question: "뭘 좋아하시나요", answer: "고양이 좋아합니다." })}
     ${InfoRow({ question: "가장 좋아하는 색?", answer: "파란색 좋아합니다." })}
