@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>나를 소개합니다</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <h1>안녕하세요! 저는 000입니다 👋</h1>
+    <div class="actions">
+      <button id="btn-dark" type="button" aria-pressed="false">다크 모드 전환</button>
+      <span id="clock-text" aria-label="현재 시간"></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="사이트 메뉴">
+      <nav>
+        <h2 class="sidebar-title">메뉴</h2>
+        <ul>
+          <li><a href="#about">소개</a></li>
+          <li><a href="#likes">좋아하는 것</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <section class="content">
+      <article id="about" class="card">
+        <h2>소개</h2>
+        <p>
+          저는 컴퓨터공학을 공부하고 있으며, 금융 분야에 관심이 많아 경영학 복수 전공을 하고 있습니다.
+        </p>
+        <img src="images/profile.jpg" alt="프로필 사진" class="profile" />
+      </article>
+
+      <article id="likes" class="card">
+        <h2>좋아하는 것</h2>
+        <ul>
+          <li>음악과 여행</li>
+          <li>새로운 기술 스택 배우기</li>
+        </ul>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 유주성. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
