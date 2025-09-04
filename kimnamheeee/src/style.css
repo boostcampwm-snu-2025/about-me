@@ -11,5 +11,16 @@
 }
 
 :root {
+    --font-size-lg: 1.75rem;
+    --font-size-md: 1.5rem;
+    --font-size-sm: 1.25rem;
     --font-family-yoster: 'Yoster Island', sans-serif;
+
+    --color-primary: #367D7F;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --color-gray-dark: #878787;
+    --color-gray-md: #C3C3C3;
+    --color-gray-light: #D9D9D9;
 }
