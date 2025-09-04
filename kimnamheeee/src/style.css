@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Yoster Island';
+    src: url('/assets/fonts/yoster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    font-family: var(--font-family-yoster);
+}
+
+:root {
+    --font-family-yoster: 'Yoster Island', sans-serif;
+}
