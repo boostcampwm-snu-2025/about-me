@@ -2,7 +2,7 @@
 
 import "./InfoRow.css";
 
-// 물결(~)로 감싸진 부분을 감지해 취소선 속성을 넣는 함수
+/* 물결(~)로 감싸진 부분을 감지해 취소선 속성을 넣는 함수 */
 const formatAnswer = (answer) => {
   const answerParts = answer.split("~");
 

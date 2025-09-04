@@ -20,7 +20,3 @@ body {
   font-family: var(--font-main);
   font-size: 62.5%; /* 16px -> 10px로 맞추기 */
 }
-
-body.blue-bg {
-  background-color: var(--background-blue);
-}

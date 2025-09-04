@@ -30,10 +30,28 @@ document.querySelector("#app").innerHTML = appHTML;
 
 const addEventListeners = () => {
   const changeColorBtn = document.querySelector("#change-color-btn");
+  const colorOverlay = document.querySelector(".color-overlay");
+
+  const originalText = "근데 왜 빨간색으로 디자인하셨어요?";
+  const changedText = "빨간색으로 돌아갈래요";
 
   changeColorBtn.addEventListener("click", () => {
-    document.body.classList.toggle("blue-bg");
+    colorOverlay.classList.toggle("is-active");
+
+    if (colorOverlay.classList.contains("is-active")) {
+      changeColorBtn.textContent = changedText;
+    } else {
+      changeColorBtn.textContent = originalText;
+    }
   });
 };
 
 addEventListeners();
+
+/*
+  setTimeout을 통해 초기 렌더링 시간을 보정한 후 js-ready 클래스를 추가
+  초기 마운트 시 파란색 애니메이션이 보이는 것을 방지하기 위함
+ */
+setTimeout(() => {
+  document.body.classList.add("js-ready");
+}, 0);
