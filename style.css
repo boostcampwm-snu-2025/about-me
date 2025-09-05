@@ -10,6 +10,8 @@ footer {
   margin-top: 20px;
   font-size: 14px;
   color: #888;
+  background-color: antiquewhite;
+  padding: 10px 0;
 }
 
 .intro {
@@ -30,10 +32,24 @@ footer {
   width: 20%;
   height: auto;
   object-fit: cover;
+  filter: invert(0);
+  transition: filter 0.3s;
 }
 
 #imai-logo {
   width: 25%;
   height: auto;
   object-fit: contain;
+}
+
+#toggleButton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#toggleButton:hover {
+  background-color: gray;
 }
