@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+h1 {
+    border-bottom: 2px solid #eee;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+img {
+    width: 150px;
+    height: 180px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: minmax(500px, 550px) minmax(500px, 550px);
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas: 
+        "header header"
+        "main1 side"
+        "main2 main2"
+        "footer footer";
+    gap: 20px;
+}
+
+.header {grid-area: header;}
+.main1 {grid-area: main1;}
+.side {grid-area: side;}
+.main2 {grid-area: main2;}
+.footer {grid-area: footer;}
+
+.dishes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat {
+    display: flex;
+    justify-content: space-between;
+}
+
