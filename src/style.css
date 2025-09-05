@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  background-color: aliceblue;
+}
+
+header {
+  margin: 50px auto;
+}
+
+.container {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-bottom: 20px;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+#name {
+  font-size: large;
+  font-weight: bold;
+}
+
+#student-id {
+  font-size: small;
+  color: gray;
+}
