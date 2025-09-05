@@ -3,17 +3,20 @@ body {
   background-color: aliceblue;
 }
 
-.container {
+.profile-card {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 500px;
   padding: 40px;
   margin: 20px auto;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-header {
-  margin: 20px auto;
+.header-section {
+  margin: 0 auto;
 }
 
 #profile-img {
@@ -29,7 +32,7 @@ header {
   flex-shrink: 0;
 }
 
-#info {
+#basic-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,12 +50,36 @@ header {
   color: gray;
 }
 
-.item {
-  border-bottom: 1px solid lightgray;
+.detail-item {
   padding: 20px;
+}
+
+.detail-item:not(:last-child) {
+  border-bottom: 1px solid lightgray;
 }
 
 .label {
   font-weight: bold;
   margin-bottom: 8px;
+}
+
+.contacts-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-link:hover {
+  background-color: #404040;
 }
