@@ -1,0 +1,15 @@
+.color-white {
+  color: var(--color-white);
+}
+
+.font-xl {
+  font-size: var(--font-xl);
+}
+
+.font-l {
+  font-size: var(--font-l);
+}
+
+.font-bold {
+  font-weight: bold;
+}
