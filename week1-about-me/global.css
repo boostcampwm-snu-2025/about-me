@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Pretendard Variable", Pretendard, Roboto, "Apple SD Gothic Neo",
+    "Noto Sans KR", sans-serif;
+}
+
+:root {
+  --color-black: "#000000";
+  --color-white: "#F7EFE5";
+  --color-primary: "#161D6F";
+  --color-secondary: "#3572EF";
+  --color-secondary-bright: "#A7E6FF";
+
+  --font-xl: 4.8;
+  --font-l: 3.2;
+  --font-r: 1.6;
+  --font-s: 1.2;
+}
