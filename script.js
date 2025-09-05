@@ -1,7 +1,9 @@
+// 이미지 색상 반전 토글 기능
 const ImaiImg = document.getElementById('imai-logo');
 const seesImg = document.getElementById('sees-logo');
 const toggleButton = document.getElementById('toggleButton');
 
+// 클릭시 색상 반전 토글
 toggleButton.addEventListener('click', () => {
   if (ImaiImg.style.filter === 'invert(1)' && seesImg.style.filter === 'invert(1)') {
     ImaiImg.style.filter = 'invert(0)';
