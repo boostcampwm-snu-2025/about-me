@@ -3,21 +3,21 @@ body {
   background-color: aliceblue;
 }
 
-header {
-  margin: 50px auto;
-}
-
 .container {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 500px;
   padding: 40px;
-  display: flex;
-  align-items: center;
-  margin: 0 auto;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+header {
+  margin: 20px auto;
 }
 
 #profile-img {
+  margin: 0 auto 20px auto;
   width: 120px;
   height: 120px;
   border-radius: 100%;
@@ -27,7 +27,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  margin-bottom: 20px;
 }
 
 #info {
@@ -46,4 +45,14 @@ header {
 #student-id {
   font-size: small;
   color: gray;
+}
+
+.item {
+  border-bottom: 1px solid lightgray;
+  padding: 20px;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
 }
