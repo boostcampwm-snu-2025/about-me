@@ -1,0 +1,10 @@
+.folder {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 130px;
+  gap: 8px;
+  cursor: pointer;
+  color: var(--color-white);
+  font-family: var(--font-family-yoster);
+}
