@@ -29,3 +29,9 @@
   background-color: var(--color-gray-light);
   box-shadow: inset -3px -3px 0 var(--color-gray-md);
 }
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
