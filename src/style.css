@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 .header-section {
@@ -97,40 +98,26 @@ body {
   background-color: var(--neutral-800);
 }
 
-.count-section {
+.score-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  gap: 6px;
+  justify-content: center;
+  gap: 4px;
   border: 1px solid var(--slate-200);
-  border-radius: 8px;
+  border-radius: 100%;
   background-color: var(--slate-100);
-  margin-top: 20px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: 80px;
 }
 
-.count-section > div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.count-section button {
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  all: unset;
-  cursor: pointer;
-}
-
-.count-section .count {
+.score-section .score {
   font-size: large;
   font-weight: bold;
   letter-spacing: 0.025em;
-}
-
-.count-section .guide {
-  font-size: small;
 }
 
 .shuttlecock {

@@ -1,6 +1,5 @@
 const detailsSectionNode = document.querySelector(".details-section");
-const countNode = document.querySelector(".count-section .count");
-const countButtonNode = document.querySelector(".count-section .count-button");
+const scoreNode = document.querySelector(".score-section .score");
 const bodyNode = document.querySelector("body");
 
 const details = [
@@ -10,14 +9,28 @@ const details = [
   { label: "관심 분야", value: "웹 프론트엔드 개발" },
 ];
 let score = 0;
-const shuttlecocks = [];
 
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
 }
 
+function executeRandomly(actionFunc, minInterval, maxInterval) {
+  const randomDelay = getRandomNumber(minInterval, maxInterval);
+  setTimeout(() => {
+    actionFunc();
+  }, randomDelay);
+}
+
 function hideShuttlecock(shuttlecockNode) {
   shuttlecockNode.style.display = "none";
+}
+
+function increaseScore() {
+  score++;
+}
+
+function displayScore() {
+  scoreNode.textContent = score.toString().padStart(4, "0");
 }
 
 function handleShuttlecockClick(shuttlecockNode) {
@@ -46,7 +59,6 @@ function createRandomShuttlecock() {
   shuttlecock.style.top = `${y}px`;
 
   bodyNode.appendChild(shuttlecock);
-  shuttlecocks.push(shuttlecock);
 
   shuttlecock.addEventListener("click", () =>
     handleShuttlecockClick(shuttlecock)
@@ -54,13 +66,6 @@ function createRandomShuttlecock() {
 
   executeRandomly(() => hideShuttlecock(shuttlecock), 3000, 8000);
   executeRandomly(createRandomShuttlecock, 2000, 5000);
-}
-
-function executeRandomly(actionFunc, minInterval, maxInterval) {
-  const randomDelay = getRandomNumber(minInterval, maxInterval);
-  setTimeout(() => {
-    actionFunc();
-  }, randomDelay);
 }
 
 // 상세 정보들 표시
@@ -82,14 +87,6 @@ function displayDetails() {
     detailItemNode.append(labelNode, valueNode);
     detailsSectionNode.appendChild(detailItemNode);
   });
-}
-
-function increaseScore() {
-  score++;
-}
-
-function displayScore() {
-  countNode.textContent = score.toString().padStart(4, "0");
 }
 
 function initialize() {
