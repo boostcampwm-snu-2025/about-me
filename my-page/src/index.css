@@ -49,8 +49,17 @@ button {
 }
 
 .image-list img {
+    margin-bottom: 0.5rem;
+}
+
+.language-list img {
     width: 40px;
     height: 40px;
     object-fit: contain;
-    margin-bottom: 0.5rem;
+}
+
+.hobby-list img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
 }
