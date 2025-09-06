@@ -9,7 +9,6 @@
   width: 100%;
   min-width: 360px;
   display: flex;
-  justify-content: center;
   scroll-snap-align: start;
   padding: 2.4rem;
 }

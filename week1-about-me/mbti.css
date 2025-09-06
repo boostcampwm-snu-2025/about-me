@@ -17,6 +17,7 @@
 
 .mbti-quiz-horizon-container {
   display: flex;
+  justify-content: center;
   gap: 0.8rem;
 }
 
