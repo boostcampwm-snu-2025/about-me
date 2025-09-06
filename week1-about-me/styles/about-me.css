@@ -1,0 +1,19 @@
+.about-me-slot-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  font-size: var(--font-l);
+}
+
+#about-me-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+#about-me-content {
+  width: 11.2rem;
+  text-align: center;
+}

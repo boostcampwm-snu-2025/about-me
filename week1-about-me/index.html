@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/global.css" rel="stylesheet" />
+    <link href="styles/background.css" rel="stylesheet" />
+    <link href="styles/font.css" rel="stylesheet" />
+    <link href="styles/button.css" rel="stylesheet" />
+    <link href="styles/arrow.css" rel="stylesheet" />
+    <link href="styles/container.css" rel="stylesheet" />
+    <link href="styles/animation.css" rel="stylesheet" />
+    <link href="styles/hero.css" rel="stylesheet" />
+    <link href="styles/about-me.css" rel="stylesheet" />
+    <link href="styles/mbti.css" rel="stylesheet" />
+    <link href="styles/project.css" rel="stylesheet" />
+    <link href="styles/outro.css" rel="stylesheet" />
+    <title>김연우 - About Me</title>
+  </head>
+  <body root="id">
+    <div class="container">
+      <!--첫번째: Hero-->
+      <section class="section color-white bg-primary">
+        <div class="hero-contents-wrapper">
+          <fade-in-element>만나서 반가워요!</fade-in-element>
+          <fade-in-element delay="1" class="font-l font-bold">
+            프론트엔드 개발자
+          </fade-in-element>
+          <fade-in-element delay="2" class="font-xl font-bold">
+            김연우입니다.
+          </fade-in-element>
+        </div>
+      </section>
+      <!--두번째: Slot을 활용한 간단한 정보 나열-->
+      <section class="section">
+        <div class="qna-container">
+          <fade-in-element class="question">
+            Q. 자기소개 해주세요!
+          </fade-in-element>
+          <div class="answer about-me-slot-container">
+            <fade-in-element dealy="1">저는</fade-in-element>
+            <div id="about-me-slot">
+              <button class="up-arrow" id="about-me-up-button"></button>
+              <fade-in-element
+                delay="2"
+                id="about-me-content"
+                class="font-bold"
+              >
+                김연우
+              </fade-in-element>
+              <button class="down-arrow" id="about-me-down-button"></button>
+            </div>
+            <fade-in-element delay="3">입니다.</fade-in-element>
+          </div>
+        </div>
+      </section>
+      <!--세번째: MBTI 퀴즈-->
+      <section class="section bg-secondary-bright">
+        <div class="qna-container">
+          <fade-in-element class="question">
+            Q. MBTI가 무엇인가요?
+          </fade-in-element>
+          <div class="answer mbti-content-container">
+            <fade-in-element delay="1">맞춰보세요!</fade-in-element>
+
+            <fade-in-element delay="2" class="mbti-quiz-with-answer">
+              <p id="mbti-result" class="font-bold font-semi-l">
+                정답은 무엇일까요..?
+              </p>
+              <div class="mbti-quiz-horizon-container">
+                <div class="mbti-quiz-vertical-container" data-category="EI">
+                  <button class="mbti-quiz-button" data-value="E">E</button>
+                  <button class="mbti-quiz-button" data-value="I">I</button>
+                </div>
+                <div class="mbti-quiz-vertical-container" data-category="SN">
+                  <button class="mbti-quiz-button" data-value="S">S</button>
+                  <button class="mbti-quiz-button" data-value="N">N</button>
+                </div>
+                <div class="mbti-quiz-vertical-container" data-category="TF">
+                  <button class="mbti-quiz-button" data-value="T">T</button>
+                  <button class="mbti-quiz-button" data-value="F">F</button>
+                </div>
+                <div class="mbti-quiz-vertical-container" data-category="JP">
+                  <button class="mbti-quiz-button" data-value="J">J</button>
+                  <button class="mbti-quiz-button" data-value="P">P</button>
+                </div>
+              </div>
+              <div class="mbti-button-container">
+                <button
+                  id="mbti-open-answer-button"
+                  class="button border-secondary"
+                >
+                  모르겠어요
+                </button>
+                <button
+                  id="mbti-submit-button"
+                  class="button bg-primary color-white"
+                  disabled
+                >
+                  제출하기
+                </button>
+              </div>
+            </fade-in-element>
+          </div>
+        </div>
+      </section>
+      <!--네번째: 활동 소개, JS를 사용하여 데이터를 리스트로 관리-->
+      <section class="overflow-section">
+        <div class="section-content qna-container">
+          <fade-in-element class="question fade-in-element">
+            Q. 어떤 활동들을 했나요?
+          </fade-in-element>
+          <div id="project-container" class="answer"></div>
+        </div>
+      </section>
+      <!--다섯번째: 아웃트로-->
+      <section class="section color-white bg-secondary">
+        <div class="outro-contents-wrapper">
+          <div class="outro-title-wrapper">
+            <fade-in-element class="font-xl font-bold">
+              한 학기동안 잘 부탁드립니다!
+            </fade-in-element>
+            <img class="outro-image" src="img/cat_typing.gif" />
+          </div>
+          <fade-in-element delay="1" class="outro-button-wrapper">
+            <a
+              href="https://github.com/Yeonu-Kim"
+              class="button github-link"
+              target="_blank"
+              norefferer
+              >깃허브 바로가기</a
+            >
+            <a
+              href="mailto:ywk0524@snu.ac.kr"
+              class="button bg-white color-black"
+              target="_blank"
+              norefferer
+              >이메일</a
+            >
+          </fade-in-element>
+        </div>
+      </section>
+    </div>
+  </body>
+  <script type="module" src="src/utils/create-observer.js"></script>
+  <script type="module" src="src/fade-in-element.js"></script>
+  <script src="src/slider.js"></script>
+  <script src="src/mbti-quiz.js"></script>
+  <script src="src/project-list.js"></script>
+</html>
