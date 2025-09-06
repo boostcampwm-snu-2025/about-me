@@ -5,56 +5,162 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>나를 소개 합니다- about me</title>
 		<meta name="description" content="전기정보공학부 김희원" />
+		<link rel="icon" href="data:," />
 		<link rel="preload" href="styles.css" as="style" />
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 	    <!-- Navbar -->
-		<header class="navbar">
-			<div class="container navbar__inner">
-				<p class="navtitle">전기정보공학부 21학번 김희원</a>
-				<nav class="navcontent" aria-label="주요">
+		<header class="site-header">
+			<div class="container header__inner">
+				<p class="brand">전기정보공학부 21학번 김희원</a>
+				<button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+					<span class="nav-toggle__bar"></span>
+				</button>
+
+				<nav class="site-nav" aria-label="주요">
 					<ul>
-						<li><a href="#about">소개</a></li>
 						<li><a href="#skills">기술</a></li>
 						<li><a href="#experiences">경험</a></li>
 						<li><a href="#projects">프로젝트</a></li>
+						<li><a href="#contact">연락처</a></li>
 					</ul>
 				</nav>
 			</div>
 		</header>
+        <!-- Main Body -->
+		<main id="main">
+			<section class="hero" id="home" aria-label="인트로">
+				<div class="container hero__inner">
+					<h1>
+						안녕하세요, <span class="accent">김희원</span>입니다. 제 페이지에
+						오신 것을 환영합니다!!
+                    </h1>
+					<p>
+						전기정보공학부 21학번 김희원 1주차 과제
+					</p>
+				</div>
+			</section>
+
+			<!-- Skills -->
+			<section class="section alt" id="skills" aria-label="기술">
+				<div class="container">
+					<h2 class="section__title">기술</h2>
+					<div class="skills">
+						<article class="card">
+							<h3>Frontend</h3>
+							<p>React, React Native, Flutter, Svelte, Vanilla Javascript</p>
+						</article>
+						<article class="card">
+							<h3>Backend</h3>
+							<p>Python (FastAPI), Java Spring</p>
+						</article>
+						<article class="card">
+							<h3>Database</h3>
+							<p>MongoDB, PostGreSQL, MySQL, Redis</p>
+						</article>
+						<article class="card">
+							<h3>Languages</h3>
+							<p>C++, Java, Python, Javascript, Dart</p>
+						</article>
+						<article class="card">
+							<h3>Tools & Others</h3>
+							<p>Docker, Github, Figma, Framer, Jira,</p>
+						</article>
+					</div>
+				</div>
+			</section>
+			
+			<!-- Experiences -->
+			<section class="section" id="experiences" aria-label="경험">
+				<div class="container">
+					<h2 class="section__title">경험</h2>
+					<div class="grid">
+						<article class="card">
+							<h3>Frontend Developer Intern</h3>
+							<p><strong>기간:</strong> 2023.10 – 2024.01</p>
+							<p><strong>회사명:</strong> 비사이드코리아 (핀테크 스타트업)</p>
+						</article>	
+						<article class="card">
+							<h3>Backend Developer Intern</h3>
+							<p><strong>기간:</strong> 2024.01 – 2024.04</p>
+							<p><strong>회사명:</strong> 플래티푸스소프트 (SI 중소기업)</p>
+						</article>
+						<article class="card">
+							<h3>Frontend Developer Intern</h3>
+							<p><strong>기간:</strong> 2024.07 – 2024.08</p>
+							<p><strong>회사명:</strong> 시마크로 (스타트업) </p>
+						</article>
+						<article class="card">
+							<h3>Backend Developer Intern</h3>
+							<p><strong>기간:</strong> 2025.02 – 2025.02</p>
+							<p><strong>회사명:</strong> 시마크로 (스타트업) </p>
+						</article>
+					</div>
+				</div>
+				</section>
+
+			</section>
+
+			<!-- Projects -->
+			<section class="section alt" id="projects" aria-label="프로젝트">
+				<div class="container">
+					<h2 class="section__title">프로젝트</h2>
+					<div class="grid">
+						<article class="card">
+							<h3>UPCY</h3>
+							<p>업사이클링 플랫폼</p>
+							<div class="btn-group">
+								<a class="btn small" href="https://github.com/kimheonningg/UPCY_MOBILE" target="_blank" rel="noopener">Frontend Code</a>
+								<a class="btn small" href="https://github.com/kimheonningg/UPCY_BE" target="_blank" rel="noopener">Backend Code</a>
+							</div>
+						</article>
+						<article class="card">
+							<h3>Radd.ie</h3>
+							<p>영상의학과 의사용 EMR 플랫폼</p>
+							<div class="btn-group">
+								<a class="btn small" href="https://github.com/kimheonningg/PIEthon3.0_team5_FE" target="_blank" rel="noopener">Frontend Code</a>
+								<a class="btn small" href="https://github.com/kimheonningg/PIEthon3.0_team5_BE" target="_blank" rel="noopener">Backend Code</a>
+							</div>
+						</article>
+						<article class="card">
+							<h3>FineTeacher</h3>
+							<p>주식, 채권, 펀드 등 금융 정보 비대칭 해소 플랫폼</p>
+							<div class="btn-group">
+								<a class="btn small" href="https://github.com/kimheonningg/KB_ai_challenge_FE" target="_blank" rel="noopener">Frontend Code</a>
+								<a class="btn small" href="https://github.com/kimheonningg/KB_ai_challenge_BE_v2" target="_blank" rel="noopener">Backend Code</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact -->
+			<section class="section" id="contact" aria-label="연락하기">
+				<div class="container">
+					<h2 class="section__title">연락하기</h2>
+					<div class="contact-info">
+					<p><strong>Email:</strong> 
+						<a href="mailto:hannahkhw@snu.ac.kr">hannahkhw@snu.ac.kr</a>
+					</p>
+					<p><strong>GitHub:</strong> 
+						<a href="https://github.com/kimheonningg" target="_blank" rel="noopener">
+						github.com/kimheonningg
+						</a>
+					</p>
+					<p><strong>LinkedIn:</strong> 
+						<a href="https://www.linkedin.com/in/kimheonningg" target="_blank" rel="noopener">
+						linkedin.com/in/kimheonningg
+						</a>
+					</p>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<script src="script.js" defer></script>
 	</body>
-	<main id="main">
-		<!-- Main -->
-		<section>
-			<div class="container"></div>
-		</section>
-		<!-- About 소개 -->
-		<section class="section" id="about" aria-label="소개">
-			<div class="container">
-				<h2 class="section__title">소개</h2>
-			</div>
-		</section>
-		<!-- Skills 기술 -->
-		<section class="section" id="skills" aria-label="기술">
-			<div class="container">
-				<h2 class="section__title">기술</h2>
-			</div>
-		</section>
-		<!-- Experiences 경험 -->
-		<section class="section" id="experiences" aria-label="경험">
-			<div class="container">
-				<h2 class="section__title">경험</h2>
-			</div>
-		</section>
-		<!-- Projects 프로젝트 -->
-		<section class="section" id="projects" aria-label="프로젝트">
-			<div class="container">
-				<h2 class="section__title">프로젝트</h2>
-			</div>
-		</section>
-	</main>
-	<footer>
-		
-	</footer>
 </html>
