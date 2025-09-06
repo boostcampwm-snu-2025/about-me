@@ -6,7 +6,7 @@ box-sizing: border-box;
 }
 
 header {
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,5 +48,51 @@ main{
     color: white;
     background-color: #000000;
     padding: 25px;
-    padding-top: 33px;
 }
+
+#card{
+    border:3px solid pink;
+    padding: 10px;
+    display:grid;
+    grid-template-columns: 90px 80px 1fr;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    line-height: 20px;
+}
+
+#card #info-name{
+    display: block;
+    flex-direction: column;
+    height: 80px;
+    margin-left: 0;
+    border-right:1px dashed gray;
+    padding-right:8px;
+    text-align: right;   
+}
+
+#card #info{
+    display: block;
+    flex-direction: column;
+    height: 80px;
+    margin-left: 8px;
+    padding-left:0;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#card #info::-webkit-scrollbar {
+    height: 2px;
+
+}
+
+#card #info::-webkit-scrollbar-thumb {
+  background-color: white;    /* 스크롤바 색 */
+  width: 5px;
+  border-radius: 3px;        /* 둥글게 */
+}
+
+#card #info::-webkit-scrollbar-track {
+  background: gray;   /* 트랙 배경 투명 */
+}
+
