@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변민규 - 개발자를 꿈꾸는 학생</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #4facfe;
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .student-id {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro-section {
+            margin-bottom: 30px;
+        }
+        
+        .intro-section h2 {
+            color: #4facfe;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+            border-bottom: 2px solid #4facfe;
+            padding-bottom: 5px;
+        }
+        
+        .intro-section p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: justify;
+        }
+        
+        .highlight {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border-left: 4px solid #4facfe;
+        }
+        
+        .highlight p {
+            font-weight: normal;
+            color: #2c3e50;
+        }
+        
+        .hobbies {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .hobby-item {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+        }
+        
+        .hobby-item h3 {
+            color: #4facfe;
+            margin-bottom: 5px;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            text-align: center;
+            color: #6c757d;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .hobbies {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>변민규</h1>
+            <div class="student-id">학번: 2020-17926</div>
+        </div>
+        
+        <div class="content">
+            <div class="intro-section">
+                <h2> 안녕하세요!</h2>
+                <p>컴퓨터공학부에 재학 중인 변민규입니다. 요즘 프론트엔드와 백엔드 개발에 관심이 생겨서 공부하고 있어요.</p>
+            </div>
+            
+            <div class="intro-section">
+                <h2> 개발에 대한 생각</h2>
+                <div class="highlight">
+                    <p>요즘 AI가 개발자들을 대체한다는 이야기가 많습니다. 저는 이에 대해 부분적으로 동의해요. 많은 개발자들이 대체될 수 있지만, 정말 필요한 건 수준 높은 개발자라고 생각합니다.</p>
+                </div>
+                <p>AI를 잘 활용하면서도, AI가 주도적으로 코딩하는 게 아닌 AI와 함께 일하는 개발자가 되고 싶어요.</p>
+            </div>
+            
+            <div class="intro-section">
+                <h2> 목표</h2>
+                <p>프론트엔드와 백엔드 둘 다 할 수 있는 풀스택 개발자가 되고 싶어요. 사용자들이 정말 유용하게 쓸 수 있는 웹사이트를 만들어보고 싶습니다.</p>
+            </div>
+            
+            <div class="intro-section">
+                <h2> 취미</h2>
+                <div class="hobbies">
+                    <div class="hobby-item">
+                        <h3> 스노보드</h3>
+                        <p>겨울에 스노보드 타는 걸 좋아해요. 자연 속에서 자유롭게 타는 느낌이 좋습니다.</p>
+                    </div>
+                    <div class="hobby-item">
+                        <h3> 유튜브</h3>
+                        <p>개발 관련 영상들을 보면서 공부하고 있어요. 새로운 기술들을 배우는 재미가 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>잘 부탁드립니다!</p>
+        </div>
+    </div>
+</body>
+</html>
