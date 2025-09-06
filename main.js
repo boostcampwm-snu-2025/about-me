@@ -9,4 +9,4 @@ namecard1.addEventListener('click', function() {
 namecard2.addEventListener('click', function() {
     namecard2.style.display = 'none';
     namecard1.style.display = 'flex';
-})
+})  
