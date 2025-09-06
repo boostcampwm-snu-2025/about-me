@@ -6,7 +6,7 @@ const toggleButtonNode = document.querySelector(".toggle-button");
 
 let score = 0;
 const shuttlecocks = [];
-const timeoutIds = [];
+const createdTimeoutIds = [];
 let shuttlecockStopped = false;
 
 function getRandomNumber(min, max) {
@@ -15,13 +15,18 @@ function getRandomNumber(min, max) {
 
 function executeRandomly(actionFunc, minInterval, maxInterval) {
   const randomDelay = getRandomNumber(minInterval, maxInterval);
-  const timeoutId = setTimeout(() => {
+
+  return setTimeout(() => {
     actionFunc();
   }, randomDelay);
-  timeoutIds.push(timeoutId);
 }
 
 function removeShuttlecock(shuttlecockNode) {
+  clearTimeout(shuttlecockNode.timeoutId);
+  const index = shuttlecocks.indexOf(shuttlecockNode);
+  if (index !== -1) {
+    shuttlecocks.splice(index, 1);
+  }
   shuttlecockNode.remove();
 }
 
@@ -40,6 +45,8 @@ function handleShuttlecockClick(shuttlecockNode) {
 }
 
 function createShuttlecock() {
+  if (shuttlecockStopped) return;
+
   const shuttlecock = document.createElement("div");
   shuttlecock.classList.add("shuttlecock");
 
@@ -65,19 +72,39 @@ function createShuttlecock() {
     handleShuttlecockClick(shuttlecock)
   );
 
-  executeRandomly(() => removeShuttlecock(shuttlecock), 1000, 4000);
-  executeRandomly(createShuttlecock, 1000, 3000);
+  const timeoutId = executeRandomly(
+    () => removeShuttlecock(shuttlecock),
+    1000,
+    4000
+  );
+  // 유저 클릭으로 노드가 없어졌을 경우 자동 삭제 setTimeout을 직접 clear하기 위함
+  shuttlecock.timeoutId = timeoutId;
+
+  createShuttlecockRandomly();
+}
+
+function createShuttlecockRandomly(minDelay = 1000, maxDelay = 3000) {
+  const createdTimeoutId = executeRandomly(
+    createShuttlecock,
+    minDelay,
+    maxDelay
+  );
+  createdTimeoutIds.push(createdTimeoutId);
 }
 
 function restartShuttlecock() {
   shuttlecockStopped = false;
   toggleButtonNode.textContent = "멈춤";
-  executeRandomly(createShuttlecock, 1000, 3000);
+  const createdTimeoutId = executeRandomly(createShuttlecock, 1000, 3000);
+  createdTimeoutIds.push(createdTimeoutId);
 }
 
 function stopShuttlecock() {
-  timeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
-  shuttlecocks.forEach((shuttle) => shuttle.remove());
+  createdTimeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
+  createdTimeoutIds.length = 0;
+
+  shuttlecocks.forEach((shuttle) => removeShuttlecock(shuttle));
+
   shuttlecockStopped = true;
   toggleButtonNode.textContent = "재시작";
 }
@@ -88,4 +115,4 @@ function handleToggleButtonClick() {
 
 toggleButtonNode.addEventListener("click", handleToggleButtonClick);
 
-executeRandomly(createShuttlecock, 0, 5000);
+createShuttlecockRandomly(0, 5000);
