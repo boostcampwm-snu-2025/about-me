@@ -2,6 +2,10 @@
   color: var(--color-white);
 }
 
+.color-black {
+  color: var(--color-black);
+}
+
 .font-xl {
   font-size: var(--font-xl);
 }

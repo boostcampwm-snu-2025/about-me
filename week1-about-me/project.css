@@ -54,16 +54,19 @@
   color: var(--color-white);
 }
 
-.github-link:hover {
-  transform: translateY(-2px);
-}
-
 .presentation-link {
-  background: var(--color-secondary-bright);
-  color: black;
+  background: var(--color-secondary);
+  color: var(--color-white);
 }
 
-.presentation-link:hover {
+.demo-link {
+  background: var(--color-secondary-bright);
+  color: var(--color-black);
+}
+
+.github-link:hover,
+.presentation-link:hover,
+.demo-link:hover {
   transform: translateY(-2px);
 }
 
