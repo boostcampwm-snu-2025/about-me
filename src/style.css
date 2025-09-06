@@ -3,85 +3,171 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/* profile_card_front */
+
 .profile-card-container {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+display: flex;
+height: 100vh;
+justify-content: center;
+align-items: center;
 }
 
 .profile-card {
+display: flex;
+flex-direction: row;
+width: 75vmin;
+height: 50vmin;
+background-color:rgb(228, 241, 252);
+border-radius: 10%;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.left-column {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 50%;
+height: 100%;
+padding: 20px;
+gap: 20px;
+}
+
+.right-column {
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 10%;
+padding-left: 5%;
+gap: 20px;
+width: 50%;
+height: 100%;
+}
+
+.photo-container {
+display: flex;
+width: 25vmin;
+height: 25vmin;
+border-radius: 50%;
+overflow: hidden;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+margin-top: 5%;
+}
+
+.photo-container img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+flex-shrink: 0;
+}
+
+.profile-name {
+font-size:xx-large;
+font-weight: bold;
+}
+
+.contact-item {
+display: flex;
+flex-direction: row;
+align-items: center;
+gap: 15px;
+}
+
+.contact-item img {
+width: 30px;
+height: 30px;
+flex-shrink: 0;
+}
+
+.contact-item p {
+font-size: 1.5vmin;
+font-weight: 500;
+margin: 0;
+}
+
+/* profile_card_back */
+
+.profile-card-container-back {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-card-back {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     width: 75vmin;
     height: 50vmin;
     background-color:rgb(228, 241, 252);
     border-radius: 10%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    gap: 40px;
+    perspective: 1000px;
 }
 
-/* profile_card_front */
-
-.left-column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    height: 100%;
-    padding: 20px;
-    gap: 20px;
-}
-
-.right-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 10%;
-    padding-left: 5%;
-    gap: 20px;
-    width: 50%;
-    height: 100%;
-}
-
-.photo-container {
-    display: flex;
-    width: 25vmin;
-    height: 25vmin;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-top: 5%;
-}
-
-.photo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    flex-shrink: 0;
-}
-
-.profile-name {
-    font-size:xx-large;
-    font-weight: bold;
-}
-
-.information-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-}
-
-.information-item img {
-    width: 30px;
-    height: 30px;
-    flex-shrink: 0;
-}
-
-.information-item p {
-    font-size: 1.5vmin;
-    font-weight: 500;
+.header {
+    color: darkblue;
+    font-size: xx-large;
     margin: 0;
 }
 
-/* profile_card_front */
+.tail {
+    color: darkblue;
+    font-size: small;
+    margin: 0;
+}
+
+
+.information-item {
+    display: inline-grid;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    width: 20vmin;
+    height: 20vmin;
+}
+
+.information-item:hover {
+    transform: rotateY(180deg);
+}
+
+.information-front, .information-back {
+    grid-area: 1 / 1 / 1 / 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.information-front {
+    background-color: #f0f8ff;
+    padding: 15px;
+}
+
+.information-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
+.information-back {
+    background-color: #5dade2;
+    transform: rotateY(180deg);
+    color: white;
+    font-size: 1.5vmin;
+    text-align: center;
+    padding: 15px;
+}
+
+.information-back p {
+    margin: 0;
+}

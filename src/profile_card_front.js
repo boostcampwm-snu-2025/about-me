@@ -30,9 +30,9 @@ left_column.appendChild(profile_name);
 photo_container.appendChild(photo);
 
 // 정보
-function create_information_item(icon_src, text) {
+function create_contact_item(icon_src, text) {
     const item_container = document.createElement("div");
-    item_container.className = "information-item";
+    item_container.className = "contact-item";
 
     const icon = document.createElement("img");
     const content = document.createElement("p");
@@ -46,11 +46,11 @@ function create_information_item(icon_src, text) {
     return item_container;
 }
 
-const phone_container = create_information_item(icon_src="image/phone.png",
+const phone_container = create_contact_item(icon_src="image/phone.png",
                                                 text="010-7629-0201");
-const email_container = create_information_item(icon_src="image/email.png",
+const email_container = create_contact_item(icon_src="image/email.png",
                                                 text="shsha0110@gmail.com");
-const instagram_container = create_information_item(icon_src="image/instagram.png",
+const instagram_container = create_contact_item(icon_src="image/instagram.png",
                                                     text="@shsha._.0110");
 
 right_column.appendChild(phone_container);
