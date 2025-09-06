@@ -19,7 +19,16 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
 button {
+    padding: 0.5rem 1rem;
     border: 1px solid var(--text-color);
     background-color: var(--button-bg);
     color: var(--button-text);
