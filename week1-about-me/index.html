@@ -7,9 +7,11 @@
     <link href="global.css" rel="stylesheet" />
     <link href="background.css" rel="stylesheet" />
     <link href="font.css" rel="stylesheet" />
+    <link href="arrow.css" rel="stylesheet" />
     <link href="container.css" rel="stylesheet" />
     <link href="animation.css" rel="stylesheet" />
     <link href="hero.css" rel="stylesheet" />
+    <link href="about-me.css" rel="stylesheet" />
     <title>김연우 - About Me</title>
   </head>
   <body root="id">
@@ -27,15 +29,51 @@
         </div>
       </section>
       <section class="section">
-        <h3>저는</h3>
-        <!--파친코 슬라이드-->
-        <span>김연우</span>
-        <h3>입니다.</h3>
+        <div class="qna-container">
+          <h3 class="fade-in-element">Q. 자기소개 해주세요!</h3>
+          <div class="about-me-slot-container">
+            <span class="fade-in-element delay-1">저는</span>
+            <div id="about-me-slot">
+              <button class="up-arrow" id="about-me-up-button"></button>
+              <span
+                id="about-me-content"
+                class="fade-in-element delay-2 font-bold"
+                >김연우</span
+              >
+              <button class="down-arrow" id="about-me-down-button"></button>
+            </div>
+            <span class="fade-in-element delay-3">입니다.</span>
+          </div>
+        </div>
       </section>
       <section class="section">
-        <div>
-          <h2>MBTI가 무엇인가요?</h2>
-          <p>맞춰보세요!</p>
+        <div class="qna-container">
+          <h3 class="fade-in-element">MBTI가 무엇인가요?</h3>
+          <div class="mbti-content-container">
+            <p class="fade-in-element delay-1">맞춰보세요!</p>
+
+            <div class="mbti-quiz-with-answer fade-in-element delay-2">
+              <p>정답은..?</p>
+              <div class="mbti-quiz-horizon-container">
+                <div class="mbti-quiz-vertical-container">
+                  <button class="mbti-quiz-button">I</button>
+                  <button class="mbti-quiz-button">E</button>
+                </div>
+                <div>
+                  <button class="mbti-quiz-button">S</button>
+                  <button class="mbti-quiz-button">N</button>
+                </div>
+                <div>
+                  <button class="mbti-quiz-button">T</button>
+                  <button class="mbti-quiz-button">F</button>
+                </div>
+                <div>
+                  <button class="mbti-quiz-button">J</button>
+                  <button class="mbti-quiz-button">P</button>
+                </div>
+              </div>
+            </div>
+          </div>
           <!--MBTI 퀴즈 섹션-->
           <div>
             <div></div>
@@ -86,4 +124,5 @@
   </body>
   <script src="src/main.js"></script>
   <script src="src/check-is-visible.js"></script>
+  <script src="src/slider.js"></script>
 </html>
