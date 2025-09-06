@@ -38,6 +38,13 @@ const appHTML = /*html*/ `
   <button id="photo-btn" class="btn">사진도 볼래요</button>
 
   ${PhotoOverlay()}
+
+  <footer class="footer">
+    <p class="footer__text">
+      2025-2 컴퓨터 및 VLSI 특강 : AI를 활용한 front-end 개발<br>
+      <strong class="footer__text--bold">1주차 미션 - “나를 소개합니다” 홈페이지</strong>
+    </p>
+  </footer>
 `;
 
 document.querySelector("#app").innerHTML = appHTML;
