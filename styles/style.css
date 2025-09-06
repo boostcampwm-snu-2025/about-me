@@ -16,7 +16,16 @@ header {
     background: #3a4349;
     color: #ffffff;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
     text-align: center;
+}
+
+.current-time {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .container {
