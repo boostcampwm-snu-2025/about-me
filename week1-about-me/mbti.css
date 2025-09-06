@@ -1,0 +1,59 @@
+.mbti-content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.mbti-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.mbti-quiz-with-answer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.mbti-quiz-horizon-container {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.mbti-quiz-vertical-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.mbti-quiz-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  border: var(--color-secondary) 1px solid;
+  background: var(--color-white);
+}
+
+.mbti-selected {
+  background: var(--color-secondary);
+}
+
+.mbti-wrong {
+  animation: shake 0.8s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.mbti-correct {
+  animation: slideUp 0.3s ease-out;
+}
+
+.mbti-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}

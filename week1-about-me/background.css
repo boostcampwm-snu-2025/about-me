@@ -2,6 +2,14 @@
   background-color: var(--color-primary);
 }
 
+.bg-secondary-bright {
+  background-color: var(--color-secondary-bright);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
 .qna-container {
   display: flex;
   width: 100%;

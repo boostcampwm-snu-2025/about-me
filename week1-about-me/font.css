@@ -10,6 +10,10 @@
   font-size: var(--font-l);
 }
 
+.font-semi-l {
+  font-size: var(--font-semi-l);
+}
+
 .font-bold {
   font-weight: bold;
 }

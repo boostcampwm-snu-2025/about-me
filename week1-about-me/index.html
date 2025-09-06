@@ -7,11 +7,13 @@
     <link href="global.css" rel="stylesheet" />
     <link href="background.css" rel="stylesheet" />
     <link href="font.css" rel="stylesheet" />
+    <link href="button.css" rel="stylesheet" />
     <link href="arrow.css" rel="stylesheet" />
     <link href="container.css" rel="stylesheet" />
     <link href="animation.css" rel="stylesheet" />
     <link href="hero.css" rel="stylesheet" />
     <link href="about-me.css" rel="stylesheet" />
+    <link href="mbti.css" rel="stylesheet" />
     <title>김연우 - About Me</title>
   </head>
   <body root="id">
@@ -46,37 +48,50 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section bg-secondary-bright">
         <div class="qna-container">
           <h3 class="fade-in-element">MBTI가 무엇인가요?</h3>
           <div class="mbti-content-container">
             <p class="fade-in-element delay-1">맞춰보세요!</p>
 
             <div class="mbti-quiz-with-answer fade-in-element delay-2">
-              <p>정답은..?</p>
+              <p id="mbti-result" class="font-bold font-semi-l">
+                정답은 무엇일까요..?
+              </p>
               <div class="mbti-quiz-horizon-container">
-                <div class="mbti-quiz-vertical-container">
-                  <button class="mbti-quiz-button">I</button>
-                  <button class="mbti-quiz-button">E</button>
+                <div class="mbti-quiz-vertical-container" data-category="EI">
+                  <button class="mbti-quiz-button" data-value="E">E</button>
+                  <button class="mbti-quiz-button" data-value="I">I</button>
                 </div>
-                <div>
-                  <button class="mbti-quiz-button">S</button>
-                  <button class="mbti-quiz-button">N</button>
+                <div class="mbti-quiz-vertical-container" data-category="SN">
+                  <button class="mbti-quiz-button" data-value="S">S</button>
+                  <button class="mbti-quiz-button" data-value="N">N</button>
                 </div>
-                <div>
-                  <button class="mbti-quiz-button">T</button>
-                  <button class="mbti-quiz-button">F</button>
+                <div class="mbti-quiz-vertical-container" data-category="TF">
+                  <button class="mbti-quiz-button" data-value="T">T</button>
+                  <button class="mbti-quiz-button" data-value="F">F</button>
                 </div>
-                <div>
-                  <button class="mbti-quiz-button">J</button>
-                  <button class="mbti-quiz-button">P</button>
+                <div class="mbti-quiz-vertical-container" data-category="JP">
+                  <button class="mbti-quiz-button" data-value="J">J</button>
+                  <button class="mbti-quiz-button" data-value="P">P</button>
                 </div>
               </div>
+              <div class="mbti-button-container">
+                <button
+                  id="mbti-open-answer-button"
+                  class="button bg-secondary-bright"
+                >
+                  모르겠어요
+                </button>
+                <button
+                  id="mbti-submit-button"
+                  class="button bg-primary color-white"
+                  disabled
+                >
+                  제출하기
+                </button>
+              </div>
             </div>
-          </div>
-          <!--MBTI 퀴즈 섹션-->
-          <div>
-            <div></div>
           </div>
         </div>
       </section>
@@ -125,4 +140,5 @@
   <script src="src/main.js"></script>
   <script src="src/check-is-visible.js"></script>
   <script src="src/slider.js"></script>
+  <script src="src/mbti-quiz.js"></script>
 </html>
