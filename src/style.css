@@ -20,6 +20,8 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+/* profile_card_front */
+
 .left-column {
     display: flex;
     flex-direction: column;
@@ -81,3 +83,5 @@ body {
     font-weight: 500;
     margin: 0;
 }
+
+/* profile_card_front */
