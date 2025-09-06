@@ -46,7 +46,8 @@
 
 .project-link {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .github-link {

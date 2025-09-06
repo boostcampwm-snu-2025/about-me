@@ -25,11 +25,11 @@
   gap: 2.4rem;
 }
 
-.qna-container > h3 {
+.question {
   font-size: var(--font-l);
   font-weight: bold;
 }
-/* 질문이 들어가는 부분 */
-.qna-container > div {
+
+.answer {
   flex: 1 0 auto;
 }

@@ -1,4 +1,4 @@
-.fade-in-element {
+fade-in-element {
   opacity: 0;
   transform: translateY(3rem);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
@@ -14,7 +14,7 @@
   transition-delay: 0.6s;
 }
 
-.fade-in-element.visible {
+fade-in-element.visible {
   opacity: 1;
   transform: translateY(0);
 }

@@ -83,7 +83,7 @@ const createProjectCard = (project, index) => {
     .join("");
 
   return `
-        <div class="fade-in-element ${delayClass}">
+        <fade-in-element delay="${delayClass}">
             <div class="project-card">
                 <div class="project-title-wrapper">
                     <h4 class="project-title">${project.title}</h4>
@@ -101,7 +101,7 @@ const createProjectCard = (project, index) => {
                 </div>
                 ${techHTML ? `<div class="project-tech">${techHTML}</div>` : ""}
             </div>
-        </div>
+        </fade-in-element>
     `;
 };
 
