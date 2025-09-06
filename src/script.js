@@ -9,7 +9,7 @@ const details = [
   { label: "취미", value: "🏸배드민턴" },
   { label: "관심 분야", value: "웹 프론트엔드 개발" },
 ];
-let count = 0;
+let score = 0;
 const shuttlecocks = [];
 
 function getRandomNumber(min, max) {
@@ -18,6 +18,12 @@ function getRandomNumber(min, max) {
 
 function hideShuttlecock(shuttlecockNode) {
   shuttlecockNode.style.display = "none";
+}
+
+function handleShuttlecockClick(shuttlecockNode) {
+  hideShuttlecock(shuttlecockNode);
+  increaseScore();
+  displayScore();
 }
 
 function createRandomShuttlecock() {
@@ -42,7 +48,9 @@ function createRandomShuttlecock() {
   bodyNode.appendChild(shuttlecock);
   shuttlecocks.push(shuttlecock);
 
-  shuttlecock.addEventListener("click", () => hideShuttlecock(shuttlecock));
+  shuttlecock.addEventListener("click", () =>
+    handleShuttlecockClick(shuttlecock)
+  );
 
   executeRandomly(() => hideShuttlecock(shuttlecock), 3000, 8000);
   executeRandomly(createRandomShuttlecock, 2000, 5000);
@@ -76,38 +84,13 @@ function displayDetails() {
   });
 }
 
-function increaseCount() {
-  count++;
+function increaseScore() {
+  score++;
 }
 
-function decreaseCount() {
-  if (count === 0) {
-    alert("셔틀콕 개수는 0보다 작을 수 없습니다.");
-    return;
-  }
-  count--;
+function displayScore() {
+  countNode.textContent = score.toString().padStart(4, "0");
 }
-
-function displayCount() {
-  countNode.textContent = count.toString().padStart(4, "0");
-}
-
-// 셔틀콕 클릭 시 개수 증가
-function handleCountButtonClick() {
-  increaseCount();
-  displayCount();
-  createRandomShuttlecock();
-}
-
-// 셔틀콕 우클릭 시 개수 감소
-function handleCountButtonRightClick(e) {
-  e.preventDefault();
-  decreaseCount();
-  displayCount();
-}
-
-countButtonNode.addEventListener("click", handleCountButtonClick);
-countButtonNode.addEventListener("contextmenu", handleCountButtonRightClick);
 
 function initialize() {
   displayDetails();
