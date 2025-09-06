@@ -28,3 +28,31 @@ profile_name.className = "profile-name"
 left_column.appendChild(photo_container);
 left_column.appendChild(profile_name);
 photo_container.appendChild(photo);
+
+// 정보
+function create_information_item(icon_src, text) {
+    const item_container = document.createElement("div");
+    item_container.className = "information-item";
+
+    const icon = document.createElement("img");
+    const content = document.createElement("p");
+
+    icon.src = icon_src;
+    content.textContent = text;
+
+    item_container.append(icon);
+    item_container.append(content);
+
+    return item_container;
+}
+
+const phone_container = create_information_item(icon_src="image/phone.png",
+                                                text="010-7629-0201");
+const email_container = create_information_item(icon_src="image/email.png",
+                                                text="shsha0110@gmail.com");
+const instagram_container = create_information_item(icon_src="image/instagram.png",
+                                                    text="@shsha._.0110");
+
+right_column.appendChild(phone_container);
+right_column.appendChild(email_container);
+right_column.append(instagram_container);
