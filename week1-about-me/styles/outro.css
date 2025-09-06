@@ -19,3 +19,13 @@
 .outro-button-wrapper > a {
   display: inline-block;
 }
+
+.outro-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.outro-image {
+  width: 24rem;
+}
