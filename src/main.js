@@ -1,4 +1,5 @@
-function toggleImage() {
+function toggleProfileImg() {
+  // 프로필 사진 토글 함수
   const img = document.getElementById("profileImg");
   const btn = document.getElementById("profileImgToggleButton");
 
@@ -12,5 +13,5 @@ function toggleImage() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("profileImgToggleButton").addEventListener("click", toggleImage);
+  document.getElementById("profileImgToggleButton").addEventListener("click", toggleProfileImg);
 });
