@@ -1,7 +1,9 @@
 const detailsSectionNode = document.querySelector(".details-section");
 const scoreNode = document.querySelector(".score");
-const bodyNode = document.querySelector("body");
-const timeoutIds = [];
+const shuttlecockContainerNode = document.querySelector(
+  ".shuttlecock-container"
+);
+const toggleButtonNode = document.querySelector(".toggle-button");
 
 const details = [
   { label: "이름", value: "임찬솔" },
@@ -10,6 +12,9 @@ const details = [
   { label: "관심 분야", value: "웹 프론트엔드 개발" },
 ];
 let score = 0;
+const shuttlecocks = [];
+const timeoutIds = [];
+let shuttlecockStopped = false;
 
 function getRandomNumber(min, max) {
   return Math.random() * (max - min) + min;
@@ -60,7 +65,8 @@ function createShuttlecock() {
   shuttlecock.style.left = `${x}px`;
   shuttlecock.style.top = `${y}px`;
 
-  bodyNode.appendChild(shuttlecock);
+  shuttlecocks.push(shuttlecock);
+  shuttlecockContainerNode.appendChild(shuttlecock);
 
   shuttlecock.addEventListener("click", () =>
     handleShuttlecockClick(shuttlecock)
@@ -70,8 +76,21 @@ function createShuttlecock() {
   executeRandomly(createShuttlecock, 1000, 3000);
 }
 
-function handleStopButtonClick() {
+function restartShuttlecock() {
+  shuttlecockStopped = false;
+  toggleButtonNode.textContent = "멈춤";
+  executeRandomly(createShuttlecock, 1000, 3000);
+}
+
+function stopShuttlecock() {
   timeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
+  shuttlecocks.forEach((shuttle) => shuttle.remove());
+  shuttlecockStopped = true;
+  toggleButtonNode.textContent = "재시작";
+}
+
+function handleToggleButtonClick() {
+  shuttlecockStopped ? restartShuttlecock() : stopShuttlecock();
 }
 
 // 상세 정보들 표시
@@ -100,3 +119,5 @@ function initialize() {
   executeRandomly(createShuttlecock, 0, 5000);
 }
 initialize();
+
+toggleButtonNode.addEventListener("click", handleToggleButtonClick);

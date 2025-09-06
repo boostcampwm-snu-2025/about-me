@@ -120,6 +120,22 @@ body {
   letter-spacing: 0.025em;
 }
 
+.toggle-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--slate-300);
+  border-radius: 4px;
+  line-height: 16px;
+  cursor: pointer;
+  background-color: var(--slate-50);
+}
+
+.toggle-button:hover {
+  background-color: var(--slate-100);
+}
+
 .shuttlecock {
   background-image: url("./images/shuttlecock.png");
   background-repeat: no-repeat;
