@@ -1,6 +1,7 @@
 const detailsSectionNode = document.querySelector(".details-section");
-const scoreNode = document.querySelector(".score-section .score");
+const scoreNode = document.querySelector(".score");
 const bodyNode = document.querySelector("body");
+const timeoutIds = [];
 
 const details = [
   { label: "이름", value: "임찬솔" },
@@ -16,13 +17,14 @@ function getRandomNumber(min, max) {
 
 function executeRandomly(actionFunc, minInterval, maxInterval) {
   const randomDelay = getRandomNumber(minInterval, maxInterval);
-  setTimeout(() => {
+  const timeoutId = setTimeout(() => {
     actionFunc();
   }, randomDelay);
+  timeoutIds.push(timeoutId);
 }
 
-function hideShuttlecock(shuttlecockNode) {
-  shuttlecockNode.style.display = "none";
+function removeShuttlecock(shuttlecockNode) {
+  shuttlecockNode.remove();
 }
 
 function increaseScore() {
@@ -34,12 +36,12 @@ function displayScore() {
 }
 
 function handleShuttlecockClick(shuttlecockNode) {
-  hideShuttlecock(shuttlecockNode);
+  removeShuttlecock(shuttlecockNode);
   increaseScore();
   displayScore();
 }
 
-function createRandomShuttlecock() {
+function createShuttlecock() {
   const shuttlecock = document.createElement("div");
   shuttlecock.classList.add("shuttlecock");
 
@@ -49,8 +51,8 @@ function createRandomShuttlecock() {
 
   const minX = 0;
   const minY = 0;
-  const maxX = window.innerWidth - 100; // 화면 너비 - 100px
-  const maxY = window.innerHeight - 100; // 화면 높이 - 100px
+  const maxX = window.innerWidth - 50; // 화면 너비 - 50px
+  const maxY = window.innerHeight - 50; // 화면 높이 - 50px
 
   const x = getRandomNumber(minX, maxX);
   const y = getRandomNumber(minY, maxY);
@@ -64,8 +66,12 @@ function createRandomShuttlecock() {
     handleShuttlecockClick(shuttlecock)
   );
 
-  executeRandomly(() => hideShuttlecock(shuttlecock), 3000, 8000);
-  executeRandomly(createRandomShuttlecock, 2000, 5000);
+  executeRandomly(() => removeShuttlecock(shuttlecock), 1000, 4000);
+  executeRandomly(createShuttlecock, 1000, 3000);
+}
+
+function handleStopButtonClick() {
+  timeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
 }
 
 // 상세 정보들 표시
@@ -91,6 +97,6 @@ function displayDetails() {
 
 function initialize() {
   displayDetails();
-  executeRandomly(createRandomShuttlecock, 0, 5000);
+  executeRandomly(createShuttlecock, 0, 5000);
 }
 initialize();
