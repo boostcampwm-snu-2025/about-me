@@ -1,16 +1,9 @@
-const detailsSectionNode = document.querySelector(".details-section");
 const scoreNode = document.querySelector(".score");
 const shuttlecockContainerNode = document.querySelector(
   ".shuttlecock-container"
 );
 const toggleButtonNode = document.querySelector(".toggle-button");
 
-const details = [
-  { label: "이름", value: "임찬솔" },
-  { label: "전공", value: "인문대학 아시아언어문명학부" },
-  { label: "취미", value: "🏸배드민턴" },
-  { label: "관심 분야", value: "웹 프론트엔드 개발" },
-];
 let score = 0;
 const shuttlecocks = [];
 const timeoutIds = [];
@@ -93,31 +86,6 @@ function handleToggleButtonClick() {
   shuttlecockStopped ? restartShuttlecock() : stopShuttlecock();
 }
 
-// 상세 정보들 표시
-function displayDetails() {
-  details.forEach((detail) => {
-    const { label, value } = detail;
-
-    const detailItemNode = document.createElement("div");
-    detailItemNode.classList.add("detail-item");
-
-    const labelNode = document.createElement("h4");
-    labelNode.classList.add("label");
-    labelNode.textContent = label;
-
-    const valueNode = document.createElement("p");
-    valueNode.classList.add("value");
-    valueNode.textContent = value;
-
-    detailItemNode.append(labelNode, valueNode);
-    detailsSectionNode.appendChild(detailItemNode);
-  });
-}
-
-function initialize() {
-  displayDetails();
-  executeRandomly(createShuttlecock, 0, 5000);
-}
-initialize();
-
 toggleButtonNode.addEventListener("click", handleToggleButtonClick);
+
+executeRandomly(createShuttlecock, 0, 5000);
