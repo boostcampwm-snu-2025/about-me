@@ -21,12 +21,12 @@ function hideShuttlecock(shuttlecockNode) {
 }
 
 function createRandomShuttlecock() {
-  const div = document.createElement("div");
-  div.classList.add("shuttlecock");
+  const shuttlecock = document.createElement("div");
+  shuttlecock.classList.add("shuttlecock");
 
-  div.style.width = "50px";
-  div.style.height = "50px";
-  div.style.position = "absolute";
+  shuttlecock.style.width = "50px";
+  shuttlecock.style.height = "50px";
+  shuttlecock.style.position = "absolute";
 
   const minX = 0;
   const minY = 0;
@@ -36,13 +36,15 @@ function createRandomShuttlecock() {
   const x = getRandomNumber(minX, maxX);
   const y = getRandomNumber(minY, maxY);
 
-  div.style.left = `${x}px`;
-  div.style.top = `${y}px`;
+  shuttlecock.style.left = `${x}px`;
+  shuttlecock.style.top = `${y}px`;
 
-  bodyNode.appendChild(div);
-  shuttlecocks.push(div);
+  bodyNode.appendChild(shuttlecock);
+  shuttlecocks.push(shuttlecock);
 
-  executeRandomly(() => hideShuttlecock(div), 3000, 8000);
+  shuttlecock.addEventListener("click", () => hideShuttlecock(shuttlecock));
+
+  executeRandomly(() => hideShuttlecock(shuttlecock), 3000, 8000);
   executeRandomly(createRandomShuttlecock, 2000, 5000);
 }
 
