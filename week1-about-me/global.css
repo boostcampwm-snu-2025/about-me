@@ -35,4 +35,5 @@ textarea {
 body {
   font-size: 1.8rem;
   background-color: var(--color-white);
+  line-height: 1.5;
 }

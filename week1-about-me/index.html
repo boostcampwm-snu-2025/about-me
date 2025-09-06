@@ -14,6 +14,7 @@
     <link href="hero.css" rel="stylesheet" />
     <link href="about-me.css" rel="stylesheet" />
     <link href="mbti.css" rel="stylesheet" />
+    <link href="project.css" rel="stylesheet" />
     <title>김연우 - About Me</title>
   </head>
   <body root="id">
@@ -95,34 +96,22 @@
           </div>
         </div>
       </section>
-      <section class="section">
-        <div class="qna-container">
+      <section class="overflow-section">
+        <div class="section-content qna-container">
           <h3 class="fade-in-element">어떤 활동들을 했나요?</h3>
-          <!--카드 컴포넌트들-->
-          <div class="fade-in-element delay-1">
-            <div class="project-card">
-              <h4 class="project-title">인턴하샤</h4>
-              <span class="project-timeline">2024년 12월 ~ 2025년 7월</span>
-              <span class="project-position">PM, 기획영업, 프론트엔드</span>
-              <div class="project-link">
-                <a href="#" class="github-link">깃허브</a>
-                <a href="#" class="ppt-link">발표 자료</a>
-              </div>
-              <div>
-                <span>소개</span>
-                <p class="project-introduce" project>
-                  서울대학교 학생과 스타트업 인턴을 연결합니다. 총 100명의 사전
-                  예약자를 모집하였으나 어쩌구 저쩌구
-                </p>
-              </div>
-            </div>
-          </div>
+          <div id="project-container"></div>
         </div>
       </section>
       <section class="section">
-        <div>
-          <h2>수상 기록</h2>
-          <!--동영상 + 카드 컴포넌트들-->
+        <div class="qna-container">
+          <h3>대회도 나가본 적이 있으신가요?</h3>
+          <div className="contest-content-container">
+            <p>해커톤에서 맛있는 밥을 먹고 오는 것을 좋아합니다!</p>
+            <div>
+              <p>비디오 클릭 시 전체 화면으로 확대할 수 있습니다.</p>
+              <div id="contest-video-container"></div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="section">
@@ -136,4 +125,5 @@
   <script src="src/check-is-visible.js"></script>
   <script src="src/slider.js"></script>
   <script src="src/mbti-quiz.js"></script>
+  <script src="src/project-list.js"></script>
 </html>
