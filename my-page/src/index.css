@@ -34,3 +34,23 @@ button {
     color: var(--button-text);
     cursor: pointer;
 }
+
+.image-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.image-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image-list img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
