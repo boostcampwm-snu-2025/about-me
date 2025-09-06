@@ -19,7 +19,7 @@ const formatAnswer = (answer) => {
 
 const InfoRow = ({ question, answer }) => {
   return /*html*/ `
-    <div class="info-row">
+    <div class="info-row__container">
       <p class="info-row__question">${question}</p>
       <p class="info-row__answer">${formatAnswer(answer)}</p>
     </div>

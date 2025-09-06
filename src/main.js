@@ -2,7 +2,11 @@
 
 import "./styles/global.css";
 import "./styles/layout.css";
+
 import InfoRow from "./components/InfoRow/InfoRow";
+import PhotoOverlay from "./components/PhotoOverlay/PhotoOverlay";
+
+const originalText = "근데 왜 빨간색으로 디자인하셨나요?";
 
 const appHTML = /*html*/ `
   <h1 class="main-title">About Me!</h1>
@@ -20,10 +24,12 @@ const appHTML = /*html*/ `
     })}
     ${InfoRow({ question: "뭘 좋아하시나요", answer: "고양이 좋아합니다." })}
     ${InfoRow({ question: "가장 좋아하는 색?", answer: "파란색 좋아합니다." })}
-    <button id="change-color-btn" class="btn info-card__btn">근데 왜 빨간색으로 디자인하셨나요?</button>
+    <button id="change-color-btn" class="btn info-card__btn">${originalText}</button>
   </section>
 
   <button id="photo-btn" class="btn">사진도 볼래요</button>
+
+  ${PhotoOverlay()}
 `;
 
 document.querySelector("#app").innerHTML = appHTML;
@@ -32,7 +38,6 @@ const addEventListeners = () => {
   const changeColorBtn = document.querySelector("#change-color-btn");
   const colorOverlay = document.querySelector(".color-overlay");
 
-  const originalText = "근데 왜 빨간색으로 디자인하셨어요?";
   const changedText = "빨간색으로 돌아갈래요";
 
   changeColorBtn.addEventListener("click", () => {
@@ -42,6 +47,19 @@ const addEventListeners = () => {
       changeColorBtn.textContent = changedText;
     } else {
       changeColorBtn.textContent = originalText;
+    }
+  });
+
+  const photoBtn = document.querySelector("#photo-btn");
+  const photoOverlay = document.querySelector(".photo-overlay__container");
+
+  photoBtn.addEventListener("click", () => {
+    photoOverlay.classList.add("is-active");
+  });
+  photoOverlay.addEventListener("click", (event) => {
+    /* 딱 검은 오버레이 배경 클릭만을 감지 (이미지, 텍스트 클릭은 감지 못하게) */
+    if (event.target === event.currentTarget) {
+      photoOverlay.classList.remove("is-active");
     }
   });
 };
