@@ -1,0 +1,27 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #f0f0f0;
+    --button-text: #333333;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #333333;
+    --button-text: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    border: 1px solid var(--text-color);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+}
