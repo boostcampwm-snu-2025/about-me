@@ -7,22 +7,34 @@
   </head>
   <body>
     <header class="header">
-      <h1>웹사이트 헤더</h1>
+      <h1>나를 소개합니다</h1>
     </header>
     <div class="container">
+      <!-- aside: 본문과 직접적으로 관련되지 않은 보조적인 콘텐츠 (사이드바, 광고 등) -->
       <aside class="sidebar">
-        <h2>사이드바</h2>
-        <p>메뉴1</p>
-        <p>메뉴2</p>
+        <!-- ul: "unordered list"의 약자로, 순서가 없는 목록을 만들 때 사용 -->
+        <ul>
+          <!-- li: ul의 각 항목 -->
+          <!-- href: <a>(anchor) 태그에서 링크의 목적지(URL)를 지정하는 속성 -->
+          <!-- data-content: 브라우저에 직접 표시되지 않지만, js를 통해 동적으로 보이게 할 수 있음 -->
+          <li><a href="#" data-content="강수민입니다.">name</a></li>
+          <li>
+            <a href="#" data-content="자유전공학부(컴공, 경영학)입니다."
+              >major</a
+            >
+          </li>
+          <li>
+            <a href="#" data-content=" infp입니다.">mbti</a>
+          </li>
+          <li>
+            <a href="#" data-content="귀여운 동물들을 좋아합니다.">like</a>
+          </li>
+        </ul>
       </aside>
-      <main class="content">
-        <h2>메인 콘텐츠</h2>
-        <p>본문 내용</p>
-        <button>클릭</button>
+      <main class="content" id="main-content">
+        <h2>안녕하세요</h2>
       </main>
     </div>
-    <footer class="footer">
-      <p>푸터 영역</p>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
