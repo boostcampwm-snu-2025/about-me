@@ -79,6 +79,9 @@ main{
 .likes{
     padding: 0 20%;
 }
+.projects{
+    padding: 0 15%;
+}
 
 .tags button{
     margin-top: 10px;
@@ -110,6 +113,7 @@ main{
     gap: 1em;
     margin-bottom: 5em;
 }
+
 .project-card{
     display: flex;
     flex-direction: column;
@@ -118,12 +122,19 @@ main{
     overflow: hidden;
     cursor: pointer;
     background-color: #ffffff;
+    padding: 1em;
 }
 .project-card img{
     width: 100%;
     height: 180px;
     display: block;
     object-fit: cover;
+}
+
+.project-grid a{
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 @media (max-width: 800px){
@@ -150,7 +161,6 @@ main{
     }
 }
 
-/*for likes & projects*/
 
 @media (max-width: 1000px) {
 
