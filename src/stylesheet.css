@@ -140,3 +140,20 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+/* Gyu's style for practice*/
+.box {
+    flex: 1; /* every box divs space 1:1 */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* box color */
+.box1 {
+    background-color: #e3f2fd;
+}
+
+.box2 {
+    background-color: #e8f5e9;
+}
