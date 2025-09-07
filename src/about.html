@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <title>소개 - 나를 소개합니다</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    #canvas { max-width: 100%; margin-top: 10px; border: 1px solid #ccc; }
+    #status { margin-top: 5px; font-weight: bold; }
+  </style>
 </head>
 <body>
   <header class="header">
@@ -27,10 +31,22 @@
         딥러닝 분야에 관심이 많고 3D 컴퓨터 비전에 관한 공부를 하였습니다.
       </p>
     </section>
+
+    <section>
+      <h2>🖼️ 객체 인식 데모</h2>
+      <input type="file" id="upload" accept="image/*" disabled>
+      <p id="status">모델을 불러오는 중... ⏳</p>
+      <canvas id="canvas"></canvas>
+    </section>
   </main>
 
   <footer class="footer">
     <p>© 2025 My Homepage | Contact: myemail@example.com</p>
   </footer>
+
+  <!-- ✅ Load order matters -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="script.js"></script>
 </body>
 </html>

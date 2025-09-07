@@ -8,7 +8,7 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: #a8dadc;
+  background-color: #9FB3DF;
   padding: 20px;
   text-align: center;
   border-bottom: 3px solid #457b9d;
@@ -93,7 +93,7 @@ button:hover {
 
 /* 푸터 */
 .footer {
-  background-color: #a8dadc;
+  background-color: #9FB3DF;
   text-align: center;
   padding: 15px;
   margin-top: 20px;
