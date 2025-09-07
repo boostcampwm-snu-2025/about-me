@@ -8,29 +8,69 @@ body {
 
 /* 헤더 */
 .header {
-  background-color: #a8dadc; /* 연한 블루 */
+  background-color: #a8dadc;
   padding: 20px;
   text-align: center;
   border-bottom: 3px solid #457b9d;
 }
 
+/* 네비게이션 바 */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  background-color: #f1faee;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 2px solid #457b9d;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #1d3557;
+  font-weight: bold;
+}
+
 /* Flexbox 레이아웃 */
 .container {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 20px;
-  flex-wrap: wrap; /* 작은 화면에서 자동 줄바꿈 */
 }
 
-section {
+/* 메인 섹션 카드 스타일 */
+section, aside {
   background: #f1faee;
   border: 2px solid #457b9d;
   border-radius: 10px;
   padding: 15px;
   margin: 10px;
-  flex: 1 1 250px; /* 크기 조절 */
+  flex: 1 1 250px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 사진 */
+.photo figure {
+  text-align: center;
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.photo figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* 사이드바 */
+.sidebar {
+  flex: 1 1 200px;
 }
 
 /* 버튼 */
@@ -38,7 +78,6 @@ section {
   text-align: center;
   margin: 20px;
 }
-
 button {
   background-color: #457b9d;
   color: white;
@@ -48,15 +87,15 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
-
 button:hover {
   background-color: #1d3557;
 }
 
-/* 사진 섹션 이미지 크기 제한 */
-.photo img {
-  max-width: 100%;   /* 부모 영역을 넘지 않음 */
-  height: auto;      /* 비율 유지 */
-  border-radius: 10px; /* 둥근 모서리 (선택 사항) */
-  
+/* 푸터 */
+.footer {
+  background-color: #a8dadc;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 3px solid #457b9d;
 }
