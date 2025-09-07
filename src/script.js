@@ -44,6 +44,7 @@ function handleShuttlecockClick(shuttlecockNode) {
   displayScore();
 }
 
+// 셔틀콕 생성
 function createShuttlecock() {
   if (shuttlecockStopped) return;
 
@@ -83,6 +84,7 @@ function createShuttlecock() {
   createShuttlecockRandomly();
 }
 
+// 무작위 간격으로 셔틀콕 생성
 function createShuttlecockRandomly(minDelay = 1000, maxDelay = 3000) {
   const createdTimeoutId = executeRandomly(
     createShuttlecock,
@@ -95,11 +97,11 @@ function createShuttlecockRandomly(minDelay = 1000, maxDelay = 3000) {
 function restartShuttlecock() {
   shuttlecockStopped = false;
   toggleButtonNode.textContent = "멈춤";
-  const createdTimeoutId = executeRandomly(createShuttlecock, 1000, 3000);
-  createdTimeoutIds.push(createdTimeoutId);
+  createShuttlecockRandomly();
 }
 
 function stopShuttlecock() {
+  // 예정된 셔틀콕 생성 전부 취소
   createdTimeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
   createdTimeoutIds.length = 0;
 
