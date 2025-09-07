@@ -1,0 +1,214 @@
+body {
+  background-color: cornflowerblue;
+  font-family: "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.profile-card-container {
+    position: relative;
+    width: 75vmin;
+    height: 50vmin;
+    perspective: 1000px;
+}
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    background-color:rgb(220, 230, 240);
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.profile-card-front, .profile-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    border-radius: 10%;
+}
+
+.profile-card-front {
+    flex-direction: row;
+}
+
+.profile-card-back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+}
+
+.next-flip-arrow-button, .prev-flip-arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    z-index: 10;
+}
+
+.next-flip-arrow-button {
+    right: -7vw;
+}
+
+.prev-flip-arrow-button {
+    left: -7vw;
+}
+
+.next-flip-arrow-button:hover, .prev-flip-arrow-button:hover {
+    opacity: 1;
+}
+
+.next-flip-arrow-button img,
+.prev-flip-arrow-button img {
+    width:7vh;
+    height: 7vh;
+}
+
+/* --- profile_card_front.js가 생성하는 요소들 --- */
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-column {
+    align-items: center;
+    gap: 20px;
+}
+
+.right-column {
+    justify-content: center;
+    padding-top: 10%;
+    padding-left: 5%;
+    gap: 20px;
+}
+
+.photo-container {
+    width: 25vmin;
+    height: 25vmin;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-item p {
+    font-size: 1.5vmin;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* --- profile_card_back.js가 생성하는 요소들 --- */
+.profile-card-content-back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+}
+
+.information-items-container {
+    display: flex;
+    gap: 20px;
+}
+
+.header {
+    color: darkblue;
+    font-size: xx-large;
+    margin: 0;
+}
+
+.tail {
+    color: darkblue;
+    font-size: small;
+    margin: 0;
+}
+
+.information-item {
+    width: 20vmin;
+    height: 20vmin;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.information-item:hover {
+    transform: rotateY(180deg);
+}
+
+.information-front, .information-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.information-front {
+    background-color: white;
+}
+
+.information-front img {
+    width: 80%;
+    height: 80%;
+    object-fit: scale-down;
+}
+
+.information-back {
+    background-color: cornflowerblue;
+    transform: rotateY(180deg);
+    color: white;
+    font-size: 2vmin;
+    text-align: center;
+}
+
+.information-back p {
+    margin: 0;
+}
