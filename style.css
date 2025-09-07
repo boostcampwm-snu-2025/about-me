@@ -1,0 +1,60 @@
+//전체 기본 설정
+ {
+  margin: 0; //border 바깥쪽 여백
+  padding: 0; //border 안쪽 여백
+  box-sizing: border-box; //width와 height에 패딩과 테두리까지 포함해서 계산
+}
+
+//제목과 본문 스타일
+h1,
+h2,
+h3 {
+  font-weight: bold;
+  margin-bottom: 10px; //글자 아래에 10px의 간격 생성
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+//버튼 스타일
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px; //값이 클수록 모서리가 둥글게 됨
+  color: white;
+  cursor: pointer; //마우스 포인터 모양
+}
+
+//레이아웃 (flexbox 레이아웃; 자식 요소들을 가로행으로 정렬)
+body {
+  font-family: Arial, Helvetica, sans-serif; //글씨체
+  background-color: #f9f9f9;
+  color: #333; //글자색
+  line-height: 1.6; //줄 간격
+}
+
+.header, .footer {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding; 20px;
+}
+
+.container {
+  display: flex; //가로 배치
+  min-height: 80hv; //화면 높이의 80%를 차지하게함
+}
+
+.sidebar {
+  flex: 1; //전체 비율 중 1
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.content {
+  flex: 3; //전체 비율 중 3;
+  background-color; #fff;
+  padding: 20px;
+}
