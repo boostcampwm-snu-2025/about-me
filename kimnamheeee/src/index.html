@@ -5,7 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about kimnamheeee</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <script type="module" src="components/app-button.js"></script>
+    <script type="module" src="components/app-folder.js"></script>
+    <script type="module" src="components/app-window.js"></script>
+    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/globals.css">
 </head>
 <body>
+    <div>
+        <app-folder src="/assets/icons/folder-icon2.svg" mode="dark">about me</app-folder>
+        <app-folder src="/assets/icons/folder-icon.svg" mode="dark">:D</app-folder>
+        <app-folder src="/assets/icons/folder-icon.svg" mode="dark">contact me!</app-folder>
+    </div>
+    <div>
+        
+    </div>
+    <app-window id="about-me-window">
+        <h1 slot="title">about me</h1>
+        <app-button slot="controls" size="md">close</app-button>
+            <div slot="content" class="row-content">
+                <img src="/assets/images/profile.png" alt="kimnamheeee" width="200px" height="200px">
+                <div slot="content" class="column-content">
+                    <h1>안녕하세요, 김남희입니다.</h1>
+                    <p>기본기를 다지는 데 집중하며, 지속적으로 성장하는 개발자가 되기 위해 노력하고 있습니다. </br> 한 학기 동안 잘 부탁드립니다!</p>
+                </div>
+            </div>
+            <div slot="content" class="column-content">
+                <h2>기본 정보</h2>
+                <ul>
+                    <li>이름: 김남희</li>
+                    <li>학번: 21학번</li>
+                    <li>소속: 인문대학 국어국문학과</li>
+                </ul>
+                <h2>기술 스택</h2>
+                <ul>
+                    <li>frontend: javascript, typescript, react, next.js</li>
+                    <li>backend: node.js, django</li>
+                    <li>database: mysql, firebase</li>
+                </ul>
+                <h2>프로젝트</h2>
+                <ul>
+                    <li>UnivGPT: 맞춤형 프롬프트 제작 및 공유 플랫폼 (BE 개발)</li>
+                    <li>멋쟁이 사주처럼: AI 기반 사주 서비스 (BE 개발)</li>
+                    <li>BOOMAP: 마인드맵 자동 생성 및 실시간 편집 플랫폼 (FE 개발)</li>
+                    <li>RE:creation: MT 게임 제작 및 배포 플랫폼 (FE 개발)</li>
+                </ul>
+            </div>
+    </app-window>
+    <app-window id="contact-window">
+        <h1 slot="title">contact me</h1>
+        <app-button slot="controls" size="md">close</app-button>
+        <div slot="content" class="row-content">
+            <app-folder src="/assets/icons/github-icon.svg" mode="light">github</app-folder>
+            <app-folder src="/assets/icons/email-icon.svg" mode="light">email</app-folder>
+            <app-folder src="/assets/icons/start-logo.svg" mode="light">linkedin</app-folder>
+            <app-folder src="/assets/icons/start-logo.svg" mode="light">blog</app-folder>
+        </div>
+    </app-window>
 </body>
 </html>
