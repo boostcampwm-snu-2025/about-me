@@ -1,0 +1,65 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --button-bg: #f0f0f0;
+    --button-text: #333333;
+}
+
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-bg: #333333;
+    --button-text: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--text-color);
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text-color);
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    cursor: pointer;
+}
+
+.image-list {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.image-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.image-list img {
+    margin-bottom: 0.5rem;
+}
+
+.language-list img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.hobby-list img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+}
