@@ -1,0 +1,5 @@
+body {
+    background-color: var(--color-primary);
+    font-family: 'Yoster Island', 'DOSMyungjo', sans-serif;
+    cursor: url('/assets/icons/cursor.svg'), default;
+}

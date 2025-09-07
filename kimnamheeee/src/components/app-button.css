@@ -1,0 +1,37 @@
+.button {
+  position: relative;
+  width: auto;
+  min-width: 135px;
+  height: 40px;
+  cursor: pointer;
+  user-select: none;
+  border-width: 3px;
+  border-style: solid;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-yoster);
+  font-size: 20px;
+  color: var(--color-black);
+
+  border-color: var(--color-white) var(--color-black) var(--color-black) var(--color-white);
+  background-color: var(--color-gray-md);
+  box-shadow: inset -3px -3px 0 var(--color-gray-dark);
+}
+
+.button:active {
+  transform: translate(2px, 2px);
+}
+
+.button.selected {
+  border-color: var(--color-black) var(--color-white) var(--color-white) var(--color-black);
+  background-color: var(--color-gray-light);
+  box-shadow: inset -3px -3px 0 var(--color-gray-md);
+}
+
+.button-content {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

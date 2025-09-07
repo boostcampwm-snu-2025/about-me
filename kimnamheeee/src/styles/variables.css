@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Yoster Island';
+    src: url('../../assets/fonts/yoster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('../../assets/fonts/DOSMyungjo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-size-lg: 1.75rem;
+    --font-size-md: 1.5rem;
+    --font-size-sm: 1.25rem;
+    --color-primary: #367D7F;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    --color-gray-dark: #878787;
+    --color-gray-md: #C3C3C3;
+    --color-gray-light: #D9D9D9;
+
+    --color-blue-dark: #02178E;
+}
