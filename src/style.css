@@ -1,0 +1,62 @@
+/* 기본 스타일 */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #eaf6fb; /* 파스텔 블루 톤 */
+  color: #333;
+}
+
+/* 헤더 */
+.header {
+  background-color: #a8dadc; /* 연한 블루 */
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #457b9d;
+}
+
+/* Flexbox 레이아웃 */
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  flex-wrap: wrap; /* 작은 화면에서 자동 줄바꿈 */
+}
+
+section {
+  background: #f1faee;
+  border: 2px solid #457b9d;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 250px; /* 크기 조절 */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 버튼 */
+.interaction {
+  text-align: center;
+  margin: 20px;
+}
+
+button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1d3557;
+}
+
+/* 사진 섹션 이미지 크기 제한 */
+.photo img {
+  max-width: 100%;   /* 부모 영역을 넘지 않음 */
+  height: auto;      /* 비율 유지 */
+  border-radius: 10px; /* 둥근 모서리 (선택 사항) */
+  
+}

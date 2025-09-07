@@ -1,14 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hello World Example</title>
-    </head>
-    <body>
-        <h1>My First Project</h1>
-        <div id="app"></div>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>나를 소개합니다</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 헤더 -->
+  <header class="header">
+    <h1>안녕하세요 👋 나를 소개합니다</h1>
+  </header>
 
-        <script src="main.js"></script>
-    </body>
+  <!-- 메인 레이아웃 (Flexbox) -->
+  <main class="container">
+    <!-- 자기 소개 -->
+    <section class="about">
+      <h2>소개</h2>
+      <p>저는 웹 개발을 공부해나가고 있는 학생입니다. Verilog를 이용한 하드웨어 디자인부터 시스템 프로그래밍 그리고 애플리케이션 프로그래밍까지 컴퓨터 과학을 좋아합니다. 뛰어난 기술을 배우고, 창의적인 아이디어를 내는 것을 좋아합니다. 딥러닝 분야에 관심이 많고 3D 컴퓨터 비전에 관한 공부를 하였습니다. </p>
+    </section>
+
+    <!-- 좋아하는 콘텐츠 -->
+    <section class="favorites">
+      <h2>나의 취미</h2>
+      <ul>
+        <li>🎥 영화</li>
+        <li>🌳 산책</li>
+      </ul>
+    </section>
+
+    <!-- 사진 -->
+    <section class="photo">
+      <h2>사진</h2>
+      <img src="img/Picture1.png">
+      <figcaption>RGB image를 MAST3R을 통해 point cloud를 얻은 뒤 visualization한 결과. 자세히 보면 작은 점들이 물체를 구성하고 있는 것을 확인할 수 있음.</figcaption>
+    </section>
+  </main>
+
+  <!-- 동적인 기능 버튼 -->
+  <div class="interaction">
+    <button id="changeColorBtn">배경색 바꾸기 🎨</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
