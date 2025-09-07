@@ -55,6 +55,9 @@ footer h2{
     border-radius: 10%;
     object-fit: cover;
 }
+
+
+
 h1{
     margin:0;
     font-size: 3em;
@@ -69,4 +72,99 @@ h2{
 main{
     padding-left: 5em;
     padding-right: 5em;
+}
+
+/*Project layout*/
+
+.likes{
+    padding: 0 20%;
+}
+
+.tags button{
+    margin-top: 10px;
+    background:#faf2db;
+    border-radius: 12px;
+    padding: 0.3em 0.8em;
+    font-family: monospace;
+    color: #699669;
+    cursor: pointer;
+    border: 1px solid #968369;
+}
+.tags button:hover{
+    background:#a3c5a3;
+    color:#fffbef;
+    font-weight:bold;
+    border: 1.5px solid #968369;
+}
+.tags button.active{
+    background:#699669;
+    color:#fffbef;
+    font-weight: bold;
+    border: 1.5px solid #968369;
+}
+
+.project-grid{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin-bottom: 5em;
+}
+.project-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #968369;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+.project-card img{
+    width: 100%;
+    height: 180px;
+    display: block;
+    object-fit: cover;
+}
+
+@media (max-width: 800px){
+    .main{
+        margin: 0 5%;
+        padding-top: 1em;
+        padding-bottom: 3em;
+    }
+    .profile{
+        flex-direction: column;
+        gap: 1.5em;
+        padding: 1em;
+    }
+    .profile img{
+        width: 180px;
+        height: 180px;
+    }
+    .profile-text h1{
+        font-size: 2em;
+        text-align: center;
+    }
+    .profile-text p{
+        text-align: center
+    }
+}
+
+/*for likes & projects*/
+
+@media (max-width: 1000px) {
+
+    .project-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .tags{
+        justify-content: center;
+    }
+}
+@media (max-width: 800px) {
+
+    .project-grid{
+        grid-template-columns: 1fr;
+    }
+
 }
