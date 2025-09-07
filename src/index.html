@@ -1,14 +1,102 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Seungmin Choi - Self Introduction</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <h1>안녕하세요!</h1>
-    <div id="dynamic-content"></div>
-    
-    <script src="main.js"></script>
+    <header class="header">
+        <nav class="navigation">
+            <h1 class="logo">SM.CHOI</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#interests">Interests</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="assets/profile.jpg" alt="Seungmin Choi Profile" class="profile-photo">
+                </div>
+                <div class="intro-text">
+                    <h1 class="hero-title">
+                        Hello, I'm <span id="typing-name" class="typing-effect"></span>
+                    </h1>
+                    <p class="hero-description" id="dynamic-intro">
+                        4th year student in Electrical and Computer Engineering at Seoul National University,<br>
+                        preparing to apply for EECS PhD programs in 2026 Fall cycle.
+                    </p>
+                    <button class="intro-button" id="changeIntroBtn">Show Different Introduction</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <h3>🎓 Education</h3>
+                        <p>I've been studying computer systems and algorithms for 4 years in the Department of Electrical and Computer Engineering at Seoul National University.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🔬 Research Interests</h3>
+                        <p>I'm passionate about Machine Learning, Computer Systems, and Human-Computer Interaction.</p>
+                    </div>
+                    <div class="about-card">
+                        <h3>🎯 Goals</h3>
+                        <p>I'm actively preparing for EECS PhD program applications for Fall 2026, gaining research experience and building expertise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section class="interests-section" id="interests">
+            <div class="container">
+                <h2 class="section-title">Interests & Hobbies</h2>
+                <div class="interests-grid">
+                    <div class="interest-item">
+                        <span class="interest-icon">💻</span>
+                        <h3>Programming</h3>
+                        <p>I enjoy learning new technologies and creating projects that solve real-world problems.</p>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">📚</span>
+                        <h3>Reading</h3>
+                        <p>I love reading books across various fields, from technical literature to philosophy.</p>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">🎵</span>
+                        <h3>Music</h3>
+                        <p>I listen to various genres of music and occasionally play instruments myself.</p>
+                    </div>
+                    <div class="interest-item">
+                        <span class="interest-icon">🏃‍♂️</span>
+                        <h3>Exercise</h3>
+                        <p>I maintain a regular exercise routine for both physical and mental well-being.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="contact">
+        <div class="container">
+            <h3>Contact</h3>
+            <p>Email: seungmin.choi@example.com</p>
+            <p>GitHub: github.com/smchoi226</p>
+        </div>
+    </footer>
+
+    <script src="scripts/interactive.js"></script>
 </body>
 </html>
