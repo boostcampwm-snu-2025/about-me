@@ -1,0 +1,61 @@
+/* 모든 요소에 박스 모델 계산 방식을 통일시켜 레이아웃 작업을 쉽게 만듭니다. */
+* {
+    box-sizing: border-box;
+}
+
+/* body 태그의 기본 여백을 없애고 기본 글꼴을 설정합니다. */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* 전체 레이아웃을 감싸는 컨테이너 */
+.container {
+    width: 90%;
+    max-width: 960px; /* 화면이 아무리 넓어져도 최대 960px을 넘지 않음 */
+    margin: 20px auto; /* 위아래 20px, 좌우는 auto로 주어 중앙 정렬 */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 헤더와 푸터 공통 스타일 */
+.page-header, .page-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.page-header {
+    border-radius: 8px 8px 0 0;
+}
+
+.page-footer {
+    border-radius: 0 0 8px 8px;
+}
+
+/* === Flexbox를 이용한 레이아웃 핵심 부분 === */
+.content-area {
+    display: flex; /* 자식 요소들(box)을 flex 아이템으로 만듭니다. */
+    padding: 20px;
+    gap: 20px;     /* flex 아이템 사이의 간격을 20px로 설정합니다. */
+}
+
+/* 모든 박스의 공통 스타일 */
+.box {
+    flex: 1; /* 모든 박스가 1:1 비율로 공간을 나눠가집니다. */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/* 각 박스의 개별 배경색 */
+.box1 {
+    background-color: #e3f2fd;
+}
+
+.box2 {
+    background-color: #e8f5e9;
+}
