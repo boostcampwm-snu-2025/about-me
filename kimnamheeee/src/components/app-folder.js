@@ -1,8 +1,3 @@
-const ICON_MAP = {
-  'default': '/assets/icons/folder-icon.svg',
-  'main': '/assets/icons/folder-icon2.svg',
-};
-
 class Folder extends HTMLElement {
   constructor() {
     super();
@@ -10,29 +5,35 @@ class Folder extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="components/app-folder.css">
       <div class="folder">
-        <img src="" alt="folder icon" class="folder-icon">
+        <img src="" alt="folder icon" class="icon" width="80px" height="80px">
         <slot></slot>
       </div>
     `;
-    this.icon = this.shadowRoot.querySelector('.folder-icon');
-    if (!this.hasAttribute('type')) this.type = 'default';
+    this.icon = this.shadowRoot.querySelector('.icon');
     this.updateIcon();
   }
 
-  static get observedAttributes() { return ['type']; }
+  static get observedAttributes() { return ['src', 'mode']; }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'type' && oldValue !== newValue) this.updateIcon();
+    if (name === 'src' && oldValue !== newValue) this.updateIcon();
+    if (name === 'mode' && oldValue !== newValue) this.updateMode(newValue);
   }
 
   updateIcon() {
-    const type = this.type || 'default';
-    this.icon.src = ICON_MAP[type]
+    this.icon.src = this.getAttribute('src');
   }
 
-  get type() { return this.getAttribute('type'); }
-  set type(value) { this.setAttribute('type', value); }
-  
+  updateMode(value) {
+    const folder = this.shadowRoot.querySelector('.folder');
+    if (value === 'light') {
+      folder.style.color = 'var(--color-black)';
+    } else if (value === 'dark') {
+      folder.style.color = 'var(--color-white)';
+    }
+  }
 }
 
 customElements.define('app-folder', Folder);
+
+export default Folder;
