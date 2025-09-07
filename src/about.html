@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>소개 - 나를 소개합니다</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #canvas { max-width: 100%; margin-top: 10px; border: 1px solid #ccc; }
+    #status { margin-top: 5px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>소개</h1>
+  </header>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">홈</a></li>
+      <li><a href="about.html">소개</a></li>
+      <li><a href="hobby.html">취미</a></li>
+      <li><a href="photo.html">사진</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section>
+      <p>
+        저는 웹 개발을 공부해나가고 있는 학생입니다. Verilog를 이용한 하드웨어 디자인부터 
+        시스템 프로그래밍 그리고 애플리케이션 프로그래밍까지 컴퓨터 과학을 좋아합니다. 
+        딥러닝 분야에 관심이 많고 3D 컴퓨터 비전에 관한 공부를 하였습니다.
+      </p>
+    </section>
+
+    <section>
+      <h2>🖼️ 객체 인식 데모</h2>
+      <input type="file" id="upload" accept="image/*" disabled>
+      <p id="status">모델을 불러오는 중... ⏳</p>
+      <canvas id="canvas"></canvas>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 My Homepage | Contact: myemail@example.com</p>
+  </footer>
+
+  <!-- ✅ Load order matters -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="script.js"></script>
+</body>
+</html>

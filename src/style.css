@@ -1,0 +1,101 @@
+/* 기본 스타일 */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #eaf6fb; /* 파스텔 블루 톤 */
+  color: #333;
+}
+
+/* 헤더 */
+.header {
+  background-color: #9FB3DF;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #457b9d;
+}
+
+/* 네비게이션 바 */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  background-color: #f1faee;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  border-bottom: 2px solid #457b9d;
+}
+.navbar li {
+  margin: 0 15px;
+}
+.navbar a {
+  text-decoration: none;
+  color: #1d3557;
+  font-weight: bold;
+}
+
+/* Flexbox 레이아웃 */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* 메인 섹션 카드 스타일 */
+section, aside {
+  background: #f1faee;
+  border: 2px solid #457b9d;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  flex: 1 1 250px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 사진 */
+.photo figure {
+  text-align: center;
+}
+.photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.photo figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+}
+
+/* 사이드바 */
+.sidebar {
+  flex: 1 1 200px;
+}
+
+/* 버튼 */
+.interaction {
+  text-align: center;
+  margin: 20px;
+}
+button {
+  background-color: #457b9d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1d3557;
+}
+
+/* 푸터 */
+.footer {
+  background-color: #9FB3DF;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+  border-top: 3px solid #457b9d;
+}
