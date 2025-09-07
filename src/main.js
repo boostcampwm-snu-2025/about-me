@@ -5,14 +5,12 @@ const likes = [
     {title: "Ethel Cain", tag: "artists", img: "https://upload.wikimedia.org/wikipedia/en/7/74/Preachers_daughter_ethel_cain.png"},
     {title: "The Lego Movie", tag: "movies", img: "https://upload.wikimedia.org/wikipedia/en/1/10/The_Lego_Movie_poster.jpg"},
     {title: "The Wind-Up Bird Chronicle", tag: "books", img: "https://upload.wikimedia.org/wikipedia/en/9/9f/Wind-up_Bird_Chronicle.jpg"},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""},
-    {title: "", tag: "movies", img: ""}
-
+    {title: "Blade Runner 2049", tag: "movies", img: "https://upload.wikimedia.org/wikipedia/en/9/9b/Blade_Runner_2049_poster.png"},
+    {title: "Eternal Sunshine of the Spotless Mind", tag: "movies", img: "https://upload.wikimedia.org/wikipedia/en/a/a4/Eternal_Sunshine_of_the_Spotless_Mind.png"},
+    {title: "Car Seat Headrest", tag: "artists", img: "https://i5.walmartimages.com/asr/aa35046e-a425-4901-af61-6806aaeaa238.a77272cdadeda43169ef2eae7895bb9b.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF"},
+    {title: "Succession", tag: "tv-shows", img: "https://upload.wikimedia.org/wikipedia/en/3/3f/Succession_season_1.jpg"},
+    {title: "Serial Experiment Lain", tag: "tv-shows", img: "https://upload.wikimedia.org/wikipedia/en/c/cd/Serial_Experiments_Lain_%28video_game%29.jpg"},
+    {title: "윙스탑 <3", tag: "food", img: "https://olo-images-live.imgix.net/10/10ed02bdef9d4cc68a1aa74dc07dbf2c.png?auto=format%2Ccompress&q=60&cs=tinysrgb&w=524&h=350&fit=crop&fm=png32&s=63810b45f0cd625e57711fdcc29d0c01"}
 ];
 
 const projectList = [

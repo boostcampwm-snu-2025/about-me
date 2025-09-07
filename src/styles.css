@@ -123,6 +123,10 @@ main{
     cursor: pointer;
     background-color: #ffffff;
     padding: 1em;
+    transition: transform 0.3s;
+}
+.project-card:hover{
+    transform: scale(1.05);
 }
 .project-card img{
     width: 100%;
@@ -135,6 +139,7 @@ main{
     text-decoration: none;
     color: inherit;
     display: block;
+    height: 100%;
 }
 
 @media (max-width: 800px){
