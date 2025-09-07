@@ -1,6 +1,7 @@
 body{
-    font-family:monospace;
+    font-family:Arial, Helvetica, sans-serif;
     background-color: #fffbef;
+    color:#968369;
     padding:0;
     margin: 0;
 }
@@ -31,4 +32,41 @@ footer h2{
 }
 .footer-content a:hover{
     color:#ffffff;
+}
+
+/*Profile*/
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:2em;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom:5em;
+    margin-top:5em;
+}
+.profile-text{
+    max-width:400px;
+}
+.profile img{
+    width: 250px;
+    height:250px;
+    border-radius: 10%;
+    object-fit: cover;
+}
+h1{
+    margin:0;
+    font-size: 3em;
+    font-family: monospace;
+    font-weight:bolder;
+    color:#699669;
+}
+h2{
+    font-family: monospace;
+    font-weight: bolder;
+}
+main{
+    padding-left: 5em;
+    padding-right: 5em;
 }
