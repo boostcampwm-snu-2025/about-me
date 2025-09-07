@@ -29,11 +29,6 @@
     flex-direction: column;
 }
 
-::slotted(.center) {
-    align-items: center;
-}
-
-
 .window-header {
     position: sticky;
     height: 12%;
