@@ -73,7 +73,7 @@ html, body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 1fr !important;
   gap: 24px;
   margin: 20px 0 24px;
 }
@@ -113,105 +113,13 @@ html, body {
 
 .footer { margin: 28px 0 8px; color: var(--muted); font-size: 13px; text-align: center; }
 
-/* ====== Picker Grid ====== */
-.picker-grid {
-  --thumb: 160px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--thumb), 1fr));
-  gap: 12px;
-  margin-top: 12px;
-}
-.thumb {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #0002;
-}
-.thumb img {
-  display: block;
-  width: 100%; height: 120px; object-fit: cover;
-  filter: saturate(0.95);
-  transition: transform .25s ease;
-}
-.thumb:hover img { transform: scale(1.03); }
-.thumb input {
-  position: absolute; inset: 8px 8px auto auto;
-  width: 18px; height: 18px; z-index: 2;
-}
-.checkmark {
-  position: absolute; right: 8px; bottom: 8px; z-index: 1;
-  background: var(--accent); color: white; font-weight: 700;
-  padding: 4px 8px; border-radius: 999px; font-size: 12px;
-  opacity: 0; transform: translateY(6px);
-  transition: opacity .2s ease, transform .2s ease;
-}
-.thumb input:checked ~ .checkmark { opacity: 1; transform: translateY(0); }
-
-.picker-actions { margin-top: 12px; display: flex; gap: 8px; }
-
-/* ====== Viewer (Carousel) ====== */
-.viewer {
-  position: fixed; inset: 0; display: grid; place-items: center;
-  z-index: 1000;
-}
-.viewer.hidden { display: none; }
-.viewer-backdrop {
-  position: absolute; inset: 0; background: rgba(0,0,0,.5); backdrop-filter: blur(2px);
-}
-.viewer-stage {
-  position: relative;
-  width: min(1100px, 92vw); height: min(80vh, 760px);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr auto;
-  overflow: hidden;
-}
-.figure { margin: 0; position: relative; display: grid; grid-template-rows: 1fr auto; }
-.figure img {
-  width: 100%; height: 100%;
-  object-fit: cover; object-position: center;
-  user-select: none; -webkit-user-drag: none;
-  touch-action: pan-y;
-}
-.figure figcaption { padding: 8px 14px; font-size: 13px; color: var(--muted); border-top: 1px solid var(--border); background: var(--card); }
-
-.iconbutton {
-  position: absolute;
-  background: rgba(0,0,0,0.5);
-  color: #fff;
-  border: none; border-radius: 10px;
-  width: 40px; height: 40px;
-  display: grid; place-items: center;
-  cursor: pointer;
-  backdrop-filter: blur(2px);
-}
-.iconbutton:hover { background: rgba(0,0,0,0.6); }
-.iconbutton.nav.prev { left: 10px; top: calc(50% - 20px); }
-.iconbutton.nav.next { right: 10px; top: calc(50% - 20px); }
-.iconbutton.close { right: 10px; top: 10px; background: rgba(0,0,0,0.45); }
-
-.dots {
-  position: absolute; left: 50%; bottom: 10px; transform: translateX(-50%);
-  display: flex; gap: 6px; padding: 6px 8px; border-radius: 999px;
-  background: rgba(0,0,0,0.35);
-}
-.dots button {
-  width: 8px; height: 8px; border-radius: 50%;
-  border: none; background: #c9d1d9; opacity: .55;
-}
-.dots button.active { opacity: 1; background: #fff; }
 
 /* 접근성/모션 */
 @media (prefers-reduced-motion: reduce) {
   .thumb img, .checkmark, .button { transition: none !important; }
 }
 
+/* simple photo viewer */
 .postcard {
   position: relative;
   padding: 0.75rem;
@@ -229,9 +137,10 @@ html, body {
   border-radius: 8px;
 }
 .postcard figcaption {
+  font-weight: 700;
   max-width: 720px;
   text-align: center;
-  font-size: .95rem;
+  font-size: 1rem;
   opacity: .8;
 }
 .postcard .nav {
@@ -239,10 +148,12 @@ html, body {
   top: 50%;
   transform: translateY(-50%);
   width: 2.2rem; height: 2.2rem;
-  border: none; border-radius: 999px;
-  background: rgba(0,0,0,.15);
-  color: #000;
+  border: none; 
+  border-radius: 999px;
+  background: rgba(122,122,122,.3);
+  
+  color: var(--fg);
   cursor: pointer;
 }
-.postcard .prev { left: .5rem; }
-.postcard .next { right: .5rem; }
+.postcard .prev { left: .4rem; }
+.postcard .next { right: .4rem; }

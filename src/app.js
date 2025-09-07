@@ -45,21 +45,22 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () 
   if (getPreferredTheme() === 'auto') updateToggleIcon();
 });
 
-// --- super simple photo viewer ---
+
+// --- simple photo viewer ---
 const PHOTOS = [
-  { src: 'photos/photo (1).jpg',  caption: 'Haneul Park, Seoul, Korea' },
-  { src: 'photos/photo (2).jpg',  caption: 'Trans-Siberian Train, Siberia, Russia' },
-  { src: 'photos/photo (3).jpg',  caption: 'Bike Trip to Busan, Yangpyeong, Korea' },
-  { src: 'photos/photo (4).jpg',  caption: 'Sunset, Casablanca, Morocco' },
-  { src: 'photos/photo (5).jpg',  caption: 'The Sahara Desert, Merzouga, Morocco' },
-  { src: 'photos/photo (6).jpg',  caption: 'Serene Lake, Interlaken, Switzerland' },
-  { src: 'photos/photo (7).jpg',  caption: 'Tuilp Field, Keukenhof, Netherlands' },
-  { src: 'photos/photo (8).jpg',  caption: 'Old City Center, Gdansk, Poland' },
-  { src: 'photos/photo (9).jpg',  caption: 'Scenic View, Delft, Netherlands' },
-  { src: 'photos/photo (10).jpg', caption: 'Sunflower Field, Giverny, France' },
-  { src: 'photos/photo (11).jpg', caption: 'Sunset along Han River, Seoul, Korea' },
-  { src: 'photos/photo (12).jpg', caption: 'WTA Tennis Championship, Seoul, Korea' },
-  { src: 'photos/photo (13).jpg', caption: 'Gorgeous Bridge, Gyeongju, Korea' },
+  { src: 'photos/photo (1).jpg',  caption: 'Haneul Park — Seoul, Korea' },
+  { src: 'photos/photo (2).jpg',  caption: 'Trans-Siberian Train — Siberia, Russia' },
+  { src: 'photos/photo (3).jpg',  caption: 'Bike Trip to Busan — Yangpyeong, Korea' },
+  { src: 'photos/photo (4).jpg',  caption: 'Sunset — Casablanca, Morocco' },
+  { src: 'photos/photo (5).jpg',  caption: 'Sahara Desert — Merzouga, Morocco' },
+  { src: 'photos/photo (6).jpg',  caption: 'Serene Lake — Interlaken, Switzerland' },
+  { src: 'photos/photo (7).jpg',  caption: 'Tuilp Field — Keukenhof, Netherlands' },
+  { src: 'photos/photo (8).jpg',  caption: 'Old Town — Gdansk, Poland' },
+  { src: 'photos/photo (9).jpg',  caption: 'Scenic View — Delft, Netherlands' },
+  { src: 'photos/photo (10).jpg', caption: 'Sunflower Field — Giverny, France' },
+  { src: 'photos/photo (11).jpg', caption: 'Han River Sunset — Seoul, Korea' },
+  { src: 'photos/photo (12).jpg', caption: 'WTA Tennis Championship — Seoul, Korea' },
+  { src: 'photos/photo (13).jpg', caption: 'Gorgeous Bridge — Gyeongju, Korea' },
   
 ];
 
