@@ -1,0 +1,145 @@
+:root {
+  --white: #ffffff;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cad5e2;
+  --neutral-800: #404040;
+  --neutral-950: #0a0a0a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--slate-50);
+}
+
+.profile-card {
+  background-color: var(--white);
+  box-shadow: 0 0 10px rgba(2, 6, 24, 0.1);
+  width: 500px;
+  padding: 40px;
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+.header-section {
+  margin: 0 auto;
+}
+
+.profile-img {
+  margin: 0 auto 20px auto;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: var(--slate-300);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.basic-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.basic-section .name {
+  font-size: large;
+  font-weight: bold;
+}
+
+.basic-section .student-id {
+  font-size: small;
+}
+
+.detail-item {
+  padding: 20px;
+}
+
+.detail-item:not(:last-child) {
+  border-bottom: 1px solid var(--slate-200);
+}
+
+.detail-item .label {
+  margin-bottom: 8px;
+}
+
+.contacts-section {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--neutral-950);
+  padding: 10px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-link:hover {
+  background-color: var(--neutral-800);
+}
+
+.score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--slate-200);
+  border-radius: 100%;
+  background-color: var(--slate-100);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 80px;
+  height: 80px;
+}
+
+.score-section .score {
+  font-size: large;
+  font-weight: bold;
+  letter-spacing: 0.025em;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  padding: 6px 10px;
+  border: 1px solid var(--slate-300);
+  border-radius: 4px;
+  line-height: 16px;
+  cursor: pointer;
+  background-color: var(--slate-50);
+}
+
+.toggle-button:hover {
+  background-color: var(--slate-100);
+}
+
+.shuttlecock {
+  background-image: url("./images/shuttlecock.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
