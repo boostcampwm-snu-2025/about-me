@@ -1,20 +1,46 @@
-// DOM이 완전히 로드된 후 실행
-document.addEventListener('DOMContentLoaded', function() {
-    // message 요소를 찾기
-    const messageElement = document.getElementById('message');
+window.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("main-header");
+    if (header) {
+        // 약간의 지연을 두고 애니메이션 시작
+        setTimeout(() => {
+            header.classList.add("show");
+        }, 170);
+    }
+    const card = document.getElementById("card");
+    if (card) {
+        setTimeout(() => {
+            card.classList.add("card-show");
+        }, 170 + 800);
+    }
+    const container = document.getElementById("container");
+    if (container) {
+        setTimeout(() => {
+            container.classList.add("show");
+        }, 170 + 800 + 1000);
+    }
+
+    const cheerContainer = document.getElementById("cheer-container");
+    const cheerBtn = document.getElementById("cheer-button");
+    const cheerCount = document.getElementById("cheer-counter");
+    if (cheerContainer) {
+        setTimeout(() => {
+            cheerContainer.classList.add("show");
+        }, 170 + 800 + 1000 + 700);
+    }
+
+    const clickText = document.getElementById("click-text");
+    if (clickText) {
+        setTimeout(() => {
+            clickText.classList.add("show");
+        }, 170 + 800 + 1000 + 700 + 300);
+    }
+
+    let count = 0;
+
+    cheerBtn.addEventListener("click", () => {
+    count++;
+    cheerCount.textContent = count;
+
     
-    // Hello World 메시지 추가
-    messageElement.textContent = 'Hello World!';
-    
-    // 추가적인 스타일링 효과
-    messageElement.style.opacity = '0';
-    messageElement.style.transition = 'opacity 1s ease-in-out';
-    
-    // 페이드인 효과
-    setTimeout(() => {
-        messageElement.style.opacity = '1';
-    }, 500);
-    
-    // 콘솔에도 메시지 출력
-    console.log('Hello World! JavaScript가 성공적으로 실행되었습니다.');
+  });
 });

@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        #message {
-            font-size: 18px;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Welcome!</h1>
-        <div id="message"></div>
-    </div>
-    
-    <script src="main.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>AboutMe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header id="main-header">
+            <span class="header-text">About :Me</span>
+        </header>
+        <main>
+            <div id="card">
+                <img src="images/카피바라.jpeg" alt="" height="80px">
+                <div id="info-name">
+                    <p>name</p>
+                    <p>nickname</p>
+                    <p>interests</p>
+                    <p>bio</p>
+                </div>
+                <div id="info">
+                    <p>@cloNoey</p>
+                    <p>capybara</p>
+                    <p>🕺 Dance | 👀 CV | 👩🏻‍💻 AI | 🍺 Alcohol</p>
+                    <p>Do What I Want</p>
+                </div>  
+            </div>
+            <div style="font-family: 'Courier New', Courier, monospace;" id="container">
+                <img style="margin-right: 10px;" src="images/추구미1.jpeg" alt="" height="150px">
+                <p>The madman will do it</p>
+                <img style="margin-left: 10px;" src="images/추구미2.jpeg" alt="" height="150px">
+            </div>
+            <div id="cheer-container">
+                <button id="cheer-button">🔥</button>
+                <span id="cheer-counter">0</span>
+            </div>
+            <div id="click-text">Click to cheer !!</div>
+        </main>
+        <footer>
+            <div>
+                <h5>컴퓨터 및 VLSI 특강</h5>
+                <p style="font-size: 11px; padding-top: 5px;">[Week 1 Mission] - ‘나를 소개합니다’</p>
+                <p style="font-size: 7px; padding-top: 5px;">made by, clonoey</p>
+            </div>
+        </footer>
+        
+        <script src="main.js"></script>
+    </body>
 </html>
