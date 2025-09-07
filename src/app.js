@@ -81,4 +81,5 @@ function show(n) {
 prevEl.addEventListener('click', () => show(i - 1));
 nextEl.addEventListener('click', () => show(i + 1));
 
-show(0);
+const start = Math.floor(Math.random() * PHOTOS.length);
+show(start);
