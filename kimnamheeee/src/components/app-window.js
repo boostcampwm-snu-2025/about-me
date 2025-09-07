@@ -20,15 +20,29 @@ class Window extends HTMLElement {
       </div>
     `;
     this.inner = this.shadowRoot.querySelector('.window');
+    this.handleOutsideClick = this.handleOutsideClick.bind(this);
+  }
+
+  connectedCallback() {
+    document.addEventListener('click', this.handleOutsideClick);
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener('click', this.handleOutsideClick);
+  }
+
+  handleOutsideClick(e) {
+    if (!this.contains(e.target)) {
+      this.close();
+    }
   }
 
   open () {
-    this.inner.style.display = 'block';
+    this.inner.style.display = 'flex';
   }
   
   close () {
     this.inner.style.display = 'none';
-    this.dispatchEvent(new CustomEvent('window-close'));
   }
 }
 
