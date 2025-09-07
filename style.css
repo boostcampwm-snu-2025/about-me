@@ -35,16 +35,17 @@ body {
   line-height: 1.6; //줄 간격
 }
 
-.header, .footer {
+.header,
+.footer {
   background-color: #007bff;
   color: white;
   text-align: center;
-  padding; 20px;
+  padding: 20px;
 }
 
 .container {
   display: flex; //가로 배치
-  min-height: 80hv; //화면 높이의 80%를 차지하게함
+  min-height: 80vh; //화면 높이의 80%를 차지하게함
 }
 
 .sidebar {
@@ -55,6 +56,6 @@ body {
 
 .content {
   flex: 3; //전체 비율 중 3;
-  background-color; #fff;
+  background-color: #fff;
   padding: 20px;
 }
