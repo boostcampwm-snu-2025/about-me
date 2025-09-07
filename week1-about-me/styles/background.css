@@ -1,0 +1,35 @@
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary-bright {
+  background-color: var(--color-secondary-bright);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.border-secondary {
+  border: var(--color-secondary) 0.1rem solid;
+}
+
+.qna-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.question {
+  font-size: var(--font-l);
+  font-weight: bold;
+}
+
+.answer {
+  flex: 1 0 auto;
+}

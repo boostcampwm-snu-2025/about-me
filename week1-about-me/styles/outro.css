@@ -1,0 +1,31 @@
+.outro-contents-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.outro-button-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 2.4rem;
+}
+
+.outro-button-wrapper > a {
+  display: inline-block;
+}
+
+.outro-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.outro-image {
+  width: 24rem;
+}

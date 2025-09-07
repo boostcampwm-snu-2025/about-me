@@ -1,0 +1,39 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Pretendard Variable", Pretendard, Roboto, "Apple SD Gothic Neo",
+    "Noto Sans KR", sans-serif;
+}
+
+:root {
+  --color-black: #000000;
+  --color-white: #f7efe5;
+  --color-primary: #161d6f;
+  --color-secondary: #3572ef;
+  --color-secondary-bright: #a7e6ff;
+
+  --font-xl: 4.8rem;
+  --font-l: 3.2rem;
+  --font-semi-l: 1.8rem;
+  --font-r: 1.6rem;
+  --font-s: 1.2rem;
+}
+
+body {
+  font-size: 1.8rem;
+  background-color: var(--color-white);
+  line-height: 1.5;
+}

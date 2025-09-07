@@ -1,0 +1,7 @@
+.hero-contents-wrapper {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.4rem;
+}

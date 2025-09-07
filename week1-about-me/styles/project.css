@@ -1,0 +1,91 @@
+#project-container {
+  padding: 3rem 0 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-card {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  border-radius: 1.6rem;
+  padding: 3rem;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.project-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-title {
+  font-size: var(--font-l);
+  font-weight: bold;
+  color: var(--color-black);
+  background-clip: text;
+}
+
+.project-timeline {
+  display: inline-block;
+  border-radius: 0.8rem;
+}
+
+.project-position {
+  color: var(--color-primary);
+}
+
+.project-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.github-link {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.presentation-link {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.demo-link {
+  background: var(--color-secondary-bright);
+  color: var(--color-black);
+}
+
+.github-link:hover,
+.presentation-link:hover,
+.demo-link:hover {
+  transform: translateY(-2px);
+}
+
+.project-introduce-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.tech-tag {
+  background: var(--color-white);
+  padding: 0.4rem 1rem;
+  border-radius: 0.8rem;
+  font-size: var(--font-s);
+}
