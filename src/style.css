@@ -5,6 +5,7 @@ padding: 0;
 box-sizing: border-box;
 }
 
+/* ----------------- */
 header {
     height: 80px;
     display: flex;
@@ -30,6 +31,8 @@ header.show .header-text {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* ----------------- */
 footer {
     height: 80px;
     display: flex;
@@ -43,6 +46,7 @@ footer {
     border-bottom: 1px solid #22222275;
 }
 
+/* ----------------- */
 main{
     height: 600px;
     color: white;
@@ -58,6 +62,14 @@ main{
     font-family: 'Courier New', Courier, monospace;
     font-size: small;
     line-height: 20px;
+    transition: all 1.2s ease;
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+#card.card-show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 #card #info-name{
@@ -81,18 +93,78 @@ main{
     overflow-y: hidden;
 }
 
+/* 카드 가로 스크롤바 */
 #card #info::-webkit-scrollbar {
     height: 2px;
 
 }
-
 #card #info::-webkit-scrollbar-thumb {
-  background-color: white;    /* 스크롤바 색 */
+  background-color: white;
   width: 5px;
-  border-radius: 3px;        /* 둥글게 */
+  border-radius: 3px;
 }
-
 #card #info::-webkit-scrollbar-track {
-  background: gray;   /* 트랙 배경 투명 */
+  background: gray;
 }
 
+
+#container{
+    border:3px dashed pink;
+    margin-top: 20px;
+    height: 300px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 1.2s ease;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+#container.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#cheer-container{
+    margin-top: 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1rem;
+    font-family:'Courier New', Courier, monospace;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: all 1.2s ease;
+}
+
+#cheer-container.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#cheer-button{
+    background-color: rgb(255, 200, 209);
+    border: 0;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+#click-text{
+    font-family: 'Courier New', Courier, monospace;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 1.2s ease;
+}
+
+#click-text.show {
+    opacity: 1;
+    transform: translateY(0);
+}
