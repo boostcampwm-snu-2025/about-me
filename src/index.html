@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jin's website </title>
+  <meta name="description" content="Jin's about me" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">👋</div>
+        <div>
+          <h1 class="title">Jin Young Choi</h1>
+          <p class="subtitle">Computer Vision · Deep Learning · Travel · Tennis</p>
+        </div>
+      </div>
+      <!-- light/dark mode toggle -->
+      <button id="themeToggle" class="button ghost" aria-label="다크/라이트 모드 전환" title="다크/라이트 모드 전환">🌓</button>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>About Me</h2>
+        <p>
+          Hey! I’m <strong>Jin Young</strong>, a Master’s student majoring in computer vision at <strong><a href="https://cv.snu.ac.kr"> Computer Vision Lab</a></strong> in <strong><a href="https://en.snu.ac.kr/index.html"> Seoul National University</a></strong>. <br>
+        </p>
+        <p class="links">
+          <a class="button" href="#" onclick="return false;">GitHub</a>
+          <a class="button" href="#" onclick="return false;">Blog</a>
+          <a class="button" href="mailto:jychoi999@snu.ac.kr">Email</a>
+        </p>
+      </section>
+      <!-- Research -->
+      <section class="card" id="research">
+        <h2>Research</h2>
+      
+        <h3>Interests</h3>
+        <ul class="taglist">
+          <li class="tag">Computer Vision</li>
+          <li class="tag">Deep Learning</li>
+          <li class="tag">Multi-Modal Learning</li>
+        </ul>
+      
+        <h3>Projects</h3>
+        <ul class="list">
+          <li>
+            <strong>Document Understanding</strong>
+          </li>
+          <li>
+            <strong>Accurate Text Rendering</strong>
+          </li>
+          <li>
+            <strong>Visual CoT via Reinforcement Learning</strong>
+          </li>
+        </ul>
+      </section>
+      
+      <!-- Hobbies -->
+      <section class="card" id="hobbies">
+        <h2>Hobbies</h2>
+        <ul class="list">
+          <li><strong>Travel</strong> — Photography</li>
+          <li><strong>Sports</strong> — Tennis [carlos alcaras], Cycling</li>
+          <li><strong>Music</strong> — Classical, Jazz, and more</li>
+        </ul>
+      </section>
+      
+      <!-- Photos -->
+      <section class="card" id="photos">
+        <h2>Photos</h2>
+        <figure class="postcard">
+          <button class="nav prev" id="prev" aria-label="Previous"></button>
+          <img id="photo" src="" alt="" />
+          <button class="nav next" id="next" aria-label="Next"></button>
+          <figcaption id="caption"></figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <span id="year"></span> Made with vanilla HTML/CSS/JS.
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
