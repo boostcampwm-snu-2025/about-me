@@ -74,8 +74,13 @@ class Button extends HTMLElement {
   handleClick() {
     const button = this.shadowRoot.querySelector('.button');
     button.classList.toggle('selected');
-    
-    this.dispatchEvent(new CustomEvent('button-click'));
+    this.dispatchEvent(new CustomEvent('button-click'), {
+      detail: {
+        button: this,
+        text: this.textContent.trim()
+      },
+      bubbles: true
+    });
   }
 }
 

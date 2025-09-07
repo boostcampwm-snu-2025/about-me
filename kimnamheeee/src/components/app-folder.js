@@ -11,6 +11,8 @@ class Folder extends HTMLElement {
     `;
     this.icon = this.shadowRoot.querySelector('.icon');
     this.updateIcon();
+    
+    this.addEventListener('dblclick', this.handleDoubleClick.bind(this));
   }
 
   static get observedAttributes() { return ['src', 'mode']; }
@@ -31,6 +33,16 @@ class Folder extends HTMLElement {
     } else if (value === 'dark') {
       folder.style.color = 'var(--color-white)';
     }
+  }
+
+  handleDoubleClick() {
+    this.dispatchEvent(new CustomEvent('folder-double-click', {
+      detail: {
+        folder: this,
+        text: this.textContent.trim()
+      },
+      bubbles: true
+    }));
   }
 }
 
