@@ -31,8 +31,9 @@ function updateToggleIcon() {
   themeToggle.setAttribute('aria-label', `현재 모드: ${effective}. 클릭하여 전환`);
 }
 function cycleTheme() {
-  const now = getPreferredTheme();
-  const next = now === 'auto' ? 'light' : now === 'light' ? 'dark' : 'auto';
+  const effective = document.documentElement.getAttribute('data-theme') === 'dark'
+    ? 'dark' : currentSystemTheme();
+  const next = (effective === 'dark') ? 'light' : 'dark';
   localStorage.setItem(THEME_KEY, next);
   applyTheme(next);
   updateToggleIcon();

@@ -123,7 +123,7 @@ html, body {
 .postcard {
   position: relative;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
   border-radius: 10px;
   display: grid;
   gap: .5rem;
@@ -155,5 +155,5 @@ html, body {
   color: var(--fg);
   cursor: pointer;
 }
-.postcard .prev { left: .4rem; }
-.postcard .next { right: .4rem; }
+.postcard .prev { left: 0rem; }
+.postcard .next { right: 0rem; }
