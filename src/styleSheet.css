@@ -1,0 +1,20 @@
+.introduction{
+    text-align: center;
+}
+
+.introduction_Title{
+    
+}
+
+.introduction_paragraph{
+    background: black;
+    color: white;
+}
+.picture_layout{
+    display: flex;
+    flex-direction: row;
+}
+
+.picture_paragraph{
+    
+}
