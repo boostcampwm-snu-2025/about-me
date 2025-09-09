@@ -1,2 +1,8 @@
-document.getElementById("text1").innerText = "Hello, World! This is a head. Tag h1 means head1.";
-document.getElementById("div1").innerHTML = "<p1>This is a division. Tag div means division. Tag p means paragraph.</p1>";
+function instaButtonClick() {
+    window.open('https://www.instagram.com/sonojae_', '_blank');
+}
+
+const instaButton = document.getElementById('instaButton');
+
+instaButton.addEventListener('click', instaButtonClick);
+

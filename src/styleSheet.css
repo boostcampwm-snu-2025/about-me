@@ -14,11 +14,14 @@
 .rowFlex_layout{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .rowFlex_layout_invert{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    
 }
 
 .verticalFlex_layout{
@@ -37,12 +40,24 @@
     width: 700px;
     
     border: 2px solid black;
+    border-radius: 10px;
 }
 
 .center_div{
     display: flex;
     flex-direction: column;
     align-items: center
+}
+
+.instaButton {
+   background-color: #E4405F;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+}
+
+.instaButton:hover {
+    transform: scale(1.05);
 }
 
 
