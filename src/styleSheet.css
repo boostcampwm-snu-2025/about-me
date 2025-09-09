@@ -10,16 +10,28 @@
     background: black;
     color: white;
 }
-.picture_layout{
+
+.rowFlex_layout{
     display: flex;
     flex-direction: row;
 }
 
+.verticalFlex_layout{
+    display: flex;
+    flex-direction: column;
+}
+
 .img_regulation{
-    width: 300px;
-    height: 300px;
+    width: auto;
+    height: 350px;
 }
 
 .picture_paragraph{
+    margin-inline: 20px;
+    padding: 20px;
+    width: 500px;
     
+    border: 2px solid black;
 }
+
+
