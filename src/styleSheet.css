@@ -16,6 +16,11 @@
     flex-direction: row;
 }
 
+.rowFlex_layout_invert{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .verticalFlex_layout{
     display: flex;
     flex-direction: column;
@@ -29,9 +34,15 @@
 .picture_paragraph{
     margin-inline: 20px;
     padding: 20px;
-    width: 500px;
+    width: 700px;
     
     border: 2px solid black;
+}
+
+.center_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 
 
