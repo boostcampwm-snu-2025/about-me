@@ -15,6 +15,11 @@
     flex-direction: row;
 }
 
+.img_regulation{
+    width: 300px;
+    height: 300px;
+}
+
 .picture_paragraph{
     
 }
