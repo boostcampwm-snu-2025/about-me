@@ -1,0 +1,63 @@
+.introduction{
+    text-align: center;
+}
+
+.introduction_Title{
+    
+}
+
+.introduction_paragraph{
+    background: black;
+    color: white;
+}
+
+.rowFlex_layout{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rowFlex_layout_invert{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+}
+
+.verticalFlex_layout{
+    display: flex;
+    flex-direction: column;
+}
+
+.img_regulation{
+    width: auto;
+    height: 350px;
+}
+
+.picture_paragraph{
+    margin-inline: 20px;
+    padding: 20px;
+    width: 700px;
+    
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.center_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.instaButton {
+   background-color: #E4405F;
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+}
+
+.instaButton:hover {
+    transform: scale(1.05);
+}
+
+
